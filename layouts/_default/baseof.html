@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {{ partial "head.html" . }}
-
 </head>
-<body>
-  {{ partial "header.html" . }}
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
+
+<body
+  class="home wp-singular page-template page-template-full-width page-template-full-width-php page page-id-827 wp-theme-grandprix grandprix-core-1.0.1 grandprix-ver-1.2.1 mkdf-grid-1300 mkdf-content-is-behind-header mkdf-empty-google-api mkdf-wide-dropdown-menu-content-in-grid mkdf-dark-header mkdf-sticky-header-on-scroll-down-up mkdf-dropdown-animate-height mkdf-header-standard mkdf-menu-area-shadow-disable mkdf-menu-area-in-grid-shadow-disable mkdf-menu-area-border-disable mkdf-menu-area-in-grid-border-disable mkdf-logo-area-border-disable mkdf-logo-area-in-grid-border-disable mkdf-side-menu-slide-from-opener mkdf-default-mobile-header mkdf-sticky-up-mobile-header mkdf-mip-off wpb-js-composer js-comp-ver-6.4.1 vc_responsive"
+  itemscope itemtype="https://schema.org/WebPage">
+  <div class="mkdf-wrapper">
+    <div class="mkdf-wrapper-inner">
+      <div class="mkdf-menu-cover"></div>
+      {{ partial "header.html" . }}
+
+      <main class="main">
+        <div class="mkdf-content" style="margin-top: -140px">
+          <div class="mkdf-content-inner">
+
+            {{ block "main" . }}{{ end }}
+          </div> <!-- close div.content_inner -->
+        </div> <!-- close div.content -->
+      </main>
+    </div> <!-- close div.mkdf-wrapper-inner  -->
+  </div> <!-- close div.mkdf-wrapper -->
   {{ partial "footer.html" . }}
   {{ partial "scripts.html" . }}
 </body>
+
 </html>
