@@ -12,14 +12,14 @@
 
 
 								<div class="mkdf-logo-wrapper">
-									<a itemprop="url" href="index.html" style="height: 200px;">
+									<a itemprop="url" href="{{ "/" | relURL }}" style="height: 200px;">
 										<img itemprop="image" class="mkdf-normal-logo"
-											src="wp-content/themes/grandprix/assets/img/logo.png" width="414"
-											height="400" alt="logo" />
+												src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
+												alt="logo" />
 										<img itemprop="image" class="mkdf-dark-logo"
-											src="wp-content/uploads/2021/05/logo1-2.png" width="1265" height="377"
+											src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 											alt="dark logo" /> <img itemprop="image" class="mkdf-light-logo"
-											src="wp-content/uploads/2021/05/logo1-2.png" width="1265" height="377"
+											src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 											alt="light logo" /> </a>
 								</div>
 
@@ -33,12 +33,12 @@
 									<ul id="menu-food-trailer" class="clearfix">
 										<li id="nav-menu-item-2769"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 current_page_item mkdf-active-item narrow">
-											<a href="index.html" class=" current "><span class="item_outer"><span
+											<a href="{{ "/" | relURL }}" class=" current "><span class="item_outer"><span
 														class="item_text">Home</span></span></a>
 										</li>
 										<li id="nav-menu-item-2861"
 											class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-												href="about-us/index.html" class=""><span class="item_outer"><span
+												href="{{ "/about-us" | relURL }}" class=""><span class="item_outer"><span
 														class="item_text">About Us</span></span></a></li>
 										<li id="nav-menu-item-3023"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow">
@@ -85,8 +85,8 @@
 												href="our-customers/index.html" class=""><span class="item_outer"><span
 														class="item_text">Customers</span></span></a></li>
 										<li id="nav-menu-item-2851"
-											class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a
-												href="contact-us/index.html" class=""><span class="item_outer"><span
+											class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
+											<a href="{{ "/contact-us/" | relURL }}" class=""><span class="item_outer"><span
 														class="item_text">Contact</span></span></a></li>
 									</ul>
 								</nav>
@@ -119,12 +119,12 @@
 									<div class="mkdf-logo-wrapper">
 										<a itemprop="url" href="index.html" style="height: 188px;">
 											<img itemprop="image" class="mkdf-normal-logo"
-												src="wp-content/uploads/2021/05/logo1-2.png" width="1265" height="377"
+												src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 												alt="logo" />
 											<img itemprop="image" class="mkdf-dark-logo"
-												src="wp-content/uploads/2021/05/logo1-2.png" width="1265" height="377"
+												src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 												alt="dark logo" /> <img itemprop="image" class="mkdf-light-logo"
-												src="wp-content/uploads/2021/05/logo1-2.png" width="1265" height="377"
+												src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 												alt="light logo" /> </a>
 									</div>
 
@@ -203,7 +203,7 @@
 											</li>
 											<li id="sticky-nav-menu-item-2851"
 												class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-												<a href="contact-us/index.html" class=""><span class="item_outer"><span
+												<a href="{{ "/contact-us/" | relURL }}" class=""><span class="item_outer"><span
 															class="item_text">Contact</span><span
 															class="plus"></span></span></a>
 											</li>
@@ -308,7 +308,7 @@
 										href="our-customers/index.html" class=""><span>Customers</span></a></li>
 								<li id="mobile-menu-item-2851"
 									class="menu-item menu-item-type-post_type menu-item-object-page "><a
-										href="contact-us/index.html" class=""><span>Contact</span></a></li>
+										href="{{ "/contact-us/" | relURL }}" class=""><span>Contact</span></a></li>
 							</ul>
 						</div>
 					</nav>
