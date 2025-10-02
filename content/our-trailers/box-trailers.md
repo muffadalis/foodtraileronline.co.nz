@@ -1,5 +1,6 @@
 ---
 title: "Box Trailers"
+weight: 2
 description: "The Box Trailer still remain the mainstay of the fast-food world. We pride ourselves on our solid construction, competitive pricing and unwavering safety standards."
 thumbnail_image: "wp-content/uploads/2019/09/banner3.jpg"
 banner_image: "wp-content/uploads/2021/05/banner17.jpg"

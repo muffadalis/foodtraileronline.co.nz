@@ -48,7 +48,7 @@
 											<div class="second">
 												<div class="inner">
 													<ul>
-														{{ range where .Site.RegularPages "Section" "our-trailers" }}
+														{{ range where .Site.RegularPages.ByWeight "Section" "our-trailers" }}
 															<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
 																<a href="{{ .RelPermalink }}">
 																	<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>
@@ -139,7 +139,7 @@
 												<div class="second">
 													<div class="inner">
 														<ul>
-															{{ range where .Site.RegularPages "Section" "our-trailers" }}
+															{{ range where .Site.RegularPages.ByWeight "Section" "our-trailers" }}
 																<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
 																	<a href="{{ .RelPermalink }}">
 																		<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>
@@ -246,7 +246,7 @@
 									<div class="second">
 										<div class="inner">
 											<ul>
-												{{ range where .Site.RegularPages "Section" "our-trailers" }}
+												{{ range where .Site.RegularPages.ByWeight "Section" "our-trailers" }}
 													<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
 														<a href="{{ .RelPermalink }}">
 															<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>

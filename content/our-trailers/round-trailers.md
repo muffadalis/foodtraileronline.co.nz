@@ -1,5 +1,6 @@
 ---
 title: "Round Trailers"
+weight: 1
 description: "With a lovely appearance, solid construction, convenience and cost-effectiveness, the Round Trailers are unique and custom-built to meet the needs of the client."
 thumbnail_image: "wp-content/uploads/2021/05/round.jpg"
 accessories:
