@@ -1,0 +1,127 @@
+{{ define "main" }}
+
+<div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-window-top mkdf-preload-background mkdf-has-bg-image mkdf-bg-parallax"
+    style="height: 650px;background-color: #f5f5f5;background-image:url(../wp-content/uploads/2021/05/header8.jpg);"
+    data-height="650">
+    <div class="mkdf-title-image">
+        <img itemprop="image" src="../wp-content/uploads/2021/05/header8.jpg" alt="Image Alt" />
+    </div>
+    <div class="mkdf-title-wrapper">
+        <div class="mkdf-title-inner">
+            <div class="mkdf-grid">
+                <h6 class="mkdf-page-subtitle" style="color: #ffffff">FOOD TRAILERS ONLINE</h6>
+                <h1 class="mkdf-page-title entry-title" style="color: #ffffff">Our Trailers</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mkdf-container mkdf-default-page-template">
+
+    <div class="mkdf-container-inner clearfix">
+        <div class="mkdf-grid-row ">
+            <div class="mkdf-page-content-holder mkdf-grid-col-12">
+                <div class="mkdf-row-grid-section-wrapper ">
+                    <div class="mkdf-row-grid-section">
+                        <div class="vc_row wpb_row vc_row-fluid vc_custom_1620724870472">
+                            <div class="mkdf-vertical-lines"><span class="mkdf-vertical-line"></span><span
+                                    class="mkdf-vertical-line"></span><span class="mkdf-vertical-line"></span></div>
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
+                                            <div class="mkdf-eh-item    " data-item-class="mkdf-eh-custom-4466"
+                                                data-1400-1600="0 0 70px 0" data-1025-1399="0 0 70px 0"
+                                                data-769-1024="0 0 70px 0" data-681-768="0 0 38px 0"
+                                                data-680="0 0 38px 0">
+                                                <div class="mkdf-eh-item-inner">
+                                                    <div class="mkdf-eh-item-content mkdf-eh-custom-4466"
+                                                        style="padding: 0 0 70px 0">
+                                                        <div class="mkdf-section-title-holder  mkdf-st-split  mkdf-has-appear-animation"
+                                                            style="padding: 0 10%">
+                                                            <div class="mkdf-st-inner">
+                                                                <span class="mkdf-st-tagline">
+                                                                    Products </span>
+                                                                <h2 class="mkdf-st-title">
+                                                                    <span class="mkdf-sts-title-text">Our
+                                                                        Trailers</span>
+                                                                    <span class="mkdf-sts-separator"></span>
+                                                                </h2>
+                                                            </div>
+                                                        </div>
+                                                        <div class="vc_empty_space" style="height: 70px"><span
+                                                                class="vc_empty_space_inner"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1620206311539">
+                                            {{ range .Pages }}
+                                            
+
+                                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div
+                                                            class="wpb_single_image wpb_content_element vc_align_center">
+
+                                                            <figure class="wpb_wrapper vc_figure">
+                                                                <div class="vc_single_image-wrapper vc_box_border_grey">
+                                                                    {{ with .Params.thumbnail_image }}
+                                                                        <img fetchpriority="high" decoding="async" width="800" height="654"
+                                                                        src="{{ . | relURL }}" alt="{{ $.Title }}"
+                                                                        class="vc_single_image-img attachment-full"
+                                                                        sizes="auto, (max-width: 800px) 100vw, 800px"/>
+                                                                    {{ end }}
+
+                                                                </div>
+                                                            </figure>
+                                                        </div>
+
+                                                        <div
+                                                            class="wpb_text_column wpb_content_element vc_custom_1620719404361">
+                                                            <div class="wpb_wrapper">
+                                                                <h4>{{ .Title }}</h4>
+                                                                <p>{{ .Params.description }}</p>
+                                                            </div>
+                                                        </div>
+                                                        <a itemprop="url" href="{{ .RelPermalink }}"
+                                                            target="_self"
+                                                            style="color: #000000;background-color: rgba(255,255,255,0.01);border-color: #0a0a0a"
+                                                            class="mkdf-btn mkdf-btn-medium mkdf-btn-predefined mkdf-btn-custom-hover-bg mkdf-btn-custom-border-hover mkdf-btn-custom-hover-color">
+                                                            <span class="mkdf-btn-predefined-line-holder">
+                                                                <span class="mkdf-btn-line-hidden"></span>
+                                                                <span class="mkdf-btn-text">Read more</span>
+                                                                <span class="mkdf-btn-line"></span>
+                                                                <i
+                                                                    class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
+                                                            </span>
+                                                        </a>
+                                                        <div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+{{ end}}

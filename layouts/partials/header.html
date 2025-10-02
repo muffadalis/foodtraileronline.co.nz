@@ -32,7 +32,7 @@
 								<nav class="mkdf-main-menu mkdf-drop-down mkdf-default-nav">
 									<ul id="menu-food-trailer" class="clearfix">
 										<li id="nav-menu-item-2769"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 current_page_item mkdf-active-item narrow">
+											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }} mkdf-active-item narrow">
 											<a href="{{ "/" | relURL }}" class=" current "><span class="item_outer"><span
 														class="item_text">Home</span></span></a>
 										</li>
@@ -42,36 +42,19 @@
 														class="item_text">About Us</span></span></a></li>
 										<li id="nav-menu-item-3023"
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow">
-											<a href="our-trailers/index.html" class=""><span class="item_outer"><span
+											<a href="{{ "/our-trailers" | relURL }}" class=""><span class="item_outer"><span
 														class="item_text">Our Trailers</span><i
 														class="mkdf-menu-arrow fa fa-angle-down"></i></span></a>
 											<div class="second">
 												<div class="inner">
 													<ul>
-														<li id="nav-menu-item-2912"
-															class="menu-item menu-item-type-post_type menu-item-object-page ">
-															<a href="round-trailers/index.html" class=""><span
-																	class="item_outer"><span class="item_text">Round
-																		Trailers</span></span></a>
-														</li>
-														<li id="nav-menu-item-2911"
-															class="menu-item menu-item-type-post_type menu-item-object-page ">
-															<a href="box-trailers/index.html" class=""><span
-																	class="item_outer"><span class="item_text">Box
-																		Trailers</span></span></a>
-														</li>
-														<li id="nav-menu-item-2910"
-															class="menu-item menu-item-type-post_type menu-item-object-page ">
-															<a href="steel-trailer/index.html" class=""><span
-																	class="item_outer"><span class="item_text">Steel
-																		Trailer</span></span></a>
-														</li>
-														<li id="nav-menu-item-3361"
-															class="menu-item menu-item-type-post_type menu-item-object-page ">
-															<a href="cabin-trailer/index.html" class=""><span
-																	class="item_outer"><span class="item_text">Cabin
-																		Trailers</span></span></a>
-														</li>
+														{{ range where .Site.RegularPages "Section" "our-trailers" }}
+															<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
+																<a href="{{ .RelPermalink }}">
+																	<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>
+																</a>
+															</li>
+														{{ end }}
 													</ul>
 												</div>
 											</div>
@@ -117,7 +100,7 @@
 
 
 									<div class="mkdf-logo-wrapper">
-										<a itemprop="url" href="index.html" style="height: 188px;">
+										<a itemprop="url" href="{{ "/" | relURL }}" style="height: 188px;">
 											<img itemprop="image" class="mkdf-normal-logo"
 												src="{{ "wp-content/uploads/2021/05/logo1-2.png" | relURL }}" width="1265" height="377"
 												alt="logo" />
@@ -137,54 +120,32 @@
 									<nav class="mkdf-main-menu mkdf-drop-down mkdf-sticky-nav">
 										<ul id="menu-food-trailer-1" class="clearfix">
 											<li id="sticky-nav-menu-item-2769"
-												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 current_page_item mkdf-active-item narrow">
-												<a href="index.html" class=" current "><span class="item_outer"><span
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }} mkdf-active-item narrow">
+												<a href="{{ "/" | relURL }}" class=" current "><span class="item_outer"><span
 															class="item_text">Home</span><span
 															class="plus"></span></span></a>
 											</li>
 											<li id="sticky-nav-menu-item-2861"
 												class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-												<a href="about-us/index.html" class=""><span class="item_outer"><span
+												<a href="{{ "/appliances/" | relURL }}" class=""><span class="item_outer"><span
 															class="item_text">About Us</span><span
 															class="plus"></span></span></a>
 											</li>
-											<li id="sticky-nav-menu-item-3023"
+											<li id="nav-menu-item-3023"
 												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow">
-												<a href="our-trailers/index.html" class=""><span
-														class="item_outer"><span class="item_text">Our
-															Trailers</span><span class="plus"></span><i
+												<a href="{{ "/our-trailers" | relURL }}" class=""><span class="item_outer"><span
+															class="item_text">Our Trailers</span><i
 															class="mkdf-menu-arrow fa fa-angle-down"></i></span></a>
 												<div class="second">
 													<div class="inner">
 														<ul>
-															<li id="sticky-nav-menu-item-2912"
-																class="menu-item menu-item-type-post_type menu-item-object-page ">
-																<a href="round-trailers/index.html" class=""><span
-																		class="item_outer"><span class="item_text">Round
-																			Trailers</span><span
-																			class="plus"></span></span></a>
-															</li>
-															<li id="sticky-nav-menu-item-2911"
-																class="menu-item menu-item-type-post_type menu-item-object-page ">
-																<a href="box-trailers/index.html" class=""><span
-																		class="item_outer"><span class="item_text">Box
-																			Trailers</span><span
-																			class="plus"></span></span></a>
-															</li>
-															<li id="sticky-nav-menu-item-2910"
-																class="menu-item menu-item-type-post_type menu-item-object-page ">
-																<a href="steel-trailer/index.html" class=""><span
-																		class="item_outer"><span class="item_text">Steel
-																			Trailer</span><span
-																			class="plus"></span></span></a>
-															</li>
-															<li id="sticky-nav-menu-item-3361"
-																class="menu-item menu-item-type-post_type menu-item-object-page ">
-																<a href="cabin-trailer/index.html" class=""><span
-																		class="item_outer"><span class="item_text">Cabin
-																			Trailers</span><span
-																			class="plus"></span></span></a>
-															</li>
+															{{ range where .Site.RegularPages "Section" "our-trailers" }}
+																<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
+																	<a href="{{ .RelPermalink }}">
+																		<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>
+																	</a>
+																</li>
+															{{ end }}
 														</ul>
 													</div>
 												</div>
@@ -271,34 +232,30 @@
 						<div class="mkdf-grid">
 							<ul id="menu-food-trailer-2" class="">
 								<li id="mobile-menu-item-2769"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 current_page_item mkdf-active-item">
-									<a href="index.html" class=" current "><span>Home</span></a>
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-827 {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }} mkdf-active-item">
+									<a href="{{ "/" | relURL }}" class=" current "><span>Home</span></a>
 								</li>
 								<li id="mobile-menu-item-2861"
 									class="menu-item menu-item-type-post_type menu-item-object-page "><a
-										href="about-us/index.html" class=""><span>About Us</span></a></li>
-								<li id="mobile-menu-item-3023"
-									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub">
-									<a href="our-trailers/index.html" class=""><span>Our Trailers</span></a><span
-										class="mobile_arrow"><i class="mkdf-sub-arrow arrow_carrot-right"></i></span>
-									<ul class="sub_menu">
-										<li id="mobile-menu-item-2912"
-											class="menu-item menu-item-type-post_type menu-item-object-page "><a
-												href="round-trailers/index.html" class=""><span>Round
-													Trailers</span></a></li>
-										<li id="mobile-menu-item-2911"
-											class="menu-item menu-item-type-post_type menu-item-object-page "><a
-												href="box-trailers/index.html" class=""><span>Box Trailers</span></a>
-										</li>
-										<li id="mobile-menu-item-2910"
-											class="menu-item menu-item-type-post_type menu-item-object-page "><a
-												href="steel-trailer/index.html" class=""><span>Steel Trailer</span></a>
-										</li>
-										<li id="mobile-menu-item-3361"
-											class="menu-item menu-item-type-post_type menu-item-object-page "><a
-												href="cabin-trailer/index.html" class=""><span>Cabin Trailers</span></a>
-										</li>
-									</ul>
+										href="{{ "/about-us/" | relURL }}" class=""><span>About Us</span></a></li>
+								<li id="nav-menu-item-3023"
+									class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub narrow">
+									<a href="{{ "/our-trailers" | relURL }}" class=""><span class="item_outer"><span
+												class="item_text">Our Trailers</span><i
+												class="mkdf-menu-arrow fa fa-angle-down"></i></span></a>
+									<div class="second">
+										<div class="inner">
+											<ul>
+												{{ range where .Site.RegularPages "Section" "our-trailers" }}
+													<li class="menu-item menu-item-type-post_type menu-item-object-page {{ if eq .Permalink $.Permalink }}current_page_item current-menu-item{{ end }}">
+														<a href="{{ .RelPermalink }}">
+															<span class="item_outer"><span class="item_text">{{ .Title }}</span></span>
+														</a>
+													</li>
+												{{ end }}
+											</ul>
+										</div>
+									</div>
 								</li>
 								<li id="mobile-menu-item-2916"
 									class="menu-item menu-item-type-post_type menu-item-object-page "><a
