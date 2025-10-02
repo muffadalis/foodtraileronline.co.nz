@@ -1,294 +1,297 @@
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 <title>{{ .Title }} | {{ .Site.Title }}</title>
 
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 <meta name='robots' content='max-image-preview:large' />
 <style>
-  img:is([sizes="auto" i], [sizes^="auto," i]) {
-    contain-intrinsic-size: 3000px 1500px
-  }
+	img:is([sizes="auto" i], [sizes^="auto," i]) {
+		contain-intrinsic-size: 3000px 1500px
+	}
 </style>
-<link rel='dns-prefetch' href='http://www.google.com/' />
-<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-<link rel="alternate" type="application/rss+xml"
-  title="Food Trailer Manufacturer and Supplier in New Zealand &raquo; Feed" href="feed/index.html" />
-<link rel="alternate" type="application/rss+xml"
-  title="Food Trailer Manufacturer and Supplier in New Zealand &raquo; Comments Feed" href="comments/feed/index.html" />
 
-<link rel='stylesheet' id='rs-plugin-settings-css'
-  href="{{ "wp-content/plugins/revslider/public/assets/css/rs63f21.css?ver=6.2.23" | relURL }}" type='text/css' media='all' />
-<link rel='stylesheet' id='grandprix-mikado-modules-css'
-  href='{{ "wp-content/themes/grandprix/assets/css/modules.min0899.css?ver=6.8.1" | relURL }}' type='text/css' media='all' />
+<link rel="alternate" type="application/rss+xml" 
+      title="Food Trailer Manufacturer and Supplier in New Zealand » Feed" 
+      href="{{ "feed/index.html" | relURL }}" />
 
-<link rel='stylesheet' id='grandprix-mikado-simple_line_icons-css'
-  href='{{ "wp-content/themes/grandprix/framework/lib/icons-pack/simple-line-icons/simple-line-icons0899.css?ver=6.8.1" | relURL }}'
-  type='text/css' media='all' />
+<link rel="alternate" type="application/rss+xml" 
+      title="Food Trailer Manufacturer and Supplier in New Zealand » Comments Feed" 
+      href="{{ "comments/feed/index.html" | relURL }}" />
 
-<link rel='stylesheet' id='grandprix-mikado-font_elegant-css'
-  href='{{ "wp-content/themes/grandprix/framework/lib/icons-pack/elegant-icons/style.min0899.css?ver=6.8.1" | relURL }}' type='text/css'
-  media='all' />
-<link rel='stylesheet' id='grandprix-mikado-ion_icons-css'
-  href='{{ "wp-content/themes/grandprix/framework/lib/icons-pack/ion-icons/css/ionicons.min0899.css?ver=6.8.1" | relURL }}' type='text/css' media='all' />
-<link rel='stylesheet' id='js_composer_front-css' href='{{ "wp-content/plugins/js_composer/assets/css/js_composer.minaec2.css?ver=6.4.1" | relURL }}' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' 
+      href="{{ "wp-content/plugins/revslider/public/assets/css/rs63f21.css" | relURL }}?ver=6.2.23" 
+      type='text/css' media='all' />
+
+<link rel='stylesheet' id='grandprix-mikado-modules-css' 
+      href="{{ "wp-content/themes/grandprix/assets/css/modules.min0899.css" | relURL }}?ver=6.8.1" 
+      type='text/css' media='all' />
+
+<link rel='stylesheet' id='grandprix-mikado-font_elegant-css' 
+      href="{{ "wp-content/themes/grandprix/framework/lib/icons-pack/elegant-icons/style.min0899.css" | relURL }}?ver=6.8.1" 
+      type='text/css' media='all' />
+
+<link rel='stylesheet' id='grandprix-mikado-ion_icons-css' 
+      href="{{ "wp-content/themes/grandprix/framework/lib/icons-pack/ion-icons/css/ionicons.min0899.css" | relURL }}?ver=6.8.1" 
+      type='text/css' media='all' />
+
+<link rel='stylesheet' id='js_composer_front-css' 
+      href="{{ "wp-content/plugins/js_composer/assets/css/js_composer.minaec2.css" | relURL }}?ver=6.4.1" 
+      type='text/css' media='all' />
+
 <link rel="icon" href="{{ "wp-content/uploads/2021/05/fav-100x100.png" | relURL }}" sizes="32x32" />
 <link rel="icon" href="{{ "wp-content/uploads/2021/05/fav-300x300.png" | relURL }}" sizes="192x192" />
 <link rel="apple-touch-icon" href="{{ "wp-content/uploads/2021/05/fav-300x300.png" | relURL }}" />
-<meta name="msapplication-TileImage"
-  content="{{ "wp-content/uploads/2021/05/fav-300x300.png" | relURL }}" />
+<meta name="msapplication-TileImage" content="{{ "wp-content/uploads/2021/05/fav-300x300.png" | relURL }}" />
+
+
 
 <script type="text/javascript">function setREVStartSize(e) {
-    //window.requestAnimationFrame(function() {				 
-    window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
-    window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
-    try {
-      var pw = document.getElementById(e.c).parentNode.offsetWidth,
-        newh;
-      pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
-      e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
-      e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
-      e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
-      e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
-      e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
-      e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
-      e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
-      if (e.layout === "fullscreen" || e.l === "fullscreen")
-        newh = Math.max(e.mh, window.RSIH);
-      else {
-        e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-        for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
-        e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
-        e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-        for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+		//window.requestAnimationFrame(function() {				 
+		window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+		window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+		try {
+			var pw = document.getElementById(e.c).parentNode.offsetWidth,
+				newh;
+			pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+			e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+			e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+			e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+			e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+			e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+			e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+			e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+			if (e.layout === "fullscreen" || e.l === "fullscreen")
+				newh = Math.max(e.mh, window.RSIH);
+			else {
+				e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+				for (var i in e.rl) if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+				e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+				e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+				for (var i in e.rl) if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
 
-        var nl = new Array(e.rl.length),
-          ix = 0,
-          sl;
-        e.tabw = e.tabhide >= pw ? 0 : e.tabw;
-        e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
-        e.tabh = e.tabhide >= pw ? 0 : e.tabh;
-        e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
-        for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
-        sl = nl[0];
-        for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
-        var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
-        newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
-      }
-      if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
-      document.getElementById(e.c).height = newh + "px";
-      window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
-    } catch (e) {
-      console.log("Failure at Presize of Slider:" + e)
-    }
-    //});
-  };
+				var nl = new Array(e.rl.length),
+					ix = 0,
+					sl;
+				e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+				e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+				e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+				e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+				for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+				sl = nl[0];
+				for (var i in nl) if (sl > nl[i] && nl[i] > 0) { sl = nl[i]; ix = i; }
+				var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+				newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+			}
+			if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));
+			document.getElementById(e.c).height = newh + "px";
+			window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
+		} catch (e) {
+			console.log("Failure at Presize of Slider:" + e)
+		}
+		//});
+	};
 </script>
 
-
-
-
-
 <style id='grandprix-mikado-modules-inline-css' type='text/css'>
-  .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-  .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-    padding: 0px;
-  }
+	.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+	.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+		padding: 0px;
+	}
 
-  @media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1024px) {
 
-    .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-    .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-      padding: 0px;
-    }
-  }
+		.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+		.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+			padding: 0px;
+		}
+	}
 
-  .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-  .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-    padding: 0px;
-  }
+	.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+	.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+		padding: 0px;
+	}
 
-  @media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1024px) {
 
-    .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-    .page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-      padding: 0px;
-    }
-  }
+		.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+		.page-id-827 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+			padding: 0px;
+		}
+	}
 
-  @media only screen and (max-width: 1024px) {
+	@media only screen and (max-width: 1024px) {
 
-    .page-id-827 .mkdf-title-holder,
-    .page-id-827 .mkdf-title-holder .mkdf-title-wrapper {
-      height: 230px !important;
-    }
-  }
+		.page-id-827 .mkdf-title-holder,
+		.page-id-827 .mkdf-title-holder .mkdf-title-wrapper {
+			height: 230px !important;
+		}
+	}
 
-  @media only screen and (max-width: 1024px) {
-    .page-id-827 .mkdf-title-holder .mkdf-title-image {
-      height: 230px !important;
-    }
-  }
+	@media only screen and (max-width: 1024px) {
+		.page-id-827 .mkdf-title-holder .mkdf-title-image {
+			height: 230px !important;
+		}
+	}
 
-  @media only screen and (max-width: 1024px) {
-    .page-id-827 .mkdf-title-holder .mkdf-title-image img {
-      display: none !important;
-    }
-  }
+	@media only screen and (max-width: 1024px) {
+		.page-id-827 .mkdf-title-holder .mkdf-title-image img {
+			display: none !important;
+		}
+	}
 </style>
 <style type="text/css" id="wp-custom-css">
-  .mkdf-page-header .mkdf-menu-area .mkdf-logo-wrapper a {
-    max-height: 140px;
-    height: 80px !important;
-    margin-top: 0;
-  }
-
-  .mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-text {
-    font-size: 14px;
-  }
-
-  .mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-title {
-    font-size: 15px;
-  }
-
-  .mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-title {
-    margin: 0;
-    font-family: Rajdhani, sans-serif;
-    font-weight: 400;
-    letter-spacing: 0px;
-    text-transform: capitalize;
-    font-size: 20px;
-    line-height: 1.277777777777778em;
-  }
-
-  .entry-date {
-    display: none !important;
-  }
-
-  .mkdf-blog-share {
-    display: none !important;
-  }
-
-  .mkdf-tabs .mkdf-tabs-nav li {
-    float: none;
-    margin: 0 auto;
-    padding: 0;
-    display: inline;
-  }
-
-  .mkdf-tabs .mkdf-tabs-nav {
-    text-align: center;
-  }
-
-  .mkdf-tabs.mkdf-tabs-standard .mkdf-tab-container {
-    line-height: 40px;
-  }
-
-
-  .mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined {
-    background-color: #6f2e2e;
-  }
-
-  .mkdf-main-menu>ul>li>a>span.item_outer:before {
-    background-color: #6f2e2e;
-  }
-
-  .mkdf-drop-down .second .inner ul li a .item_outer:before {
-    background-color: #6f2e2e;
-  }
+	.mkdf-page-header .mkdf-menu-area .mkdf-logo-wrapper a {
+		max-height: 140px;
+		height: 80px !important;
+		margin-top: 0;
+	}
+
+	.mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-text {
+		font-size: 14px;
+	}
+
+	.mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-title {
+		font-size: 15px;
+	}
+
+	.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-title {
+		margin: 0;
+		font-family: Rajdhani, sans-serif;
+		font-weight: 400;
+		letter-spacing: 0px;
+		text-transform: capitalize;
+		font-size: 20px;
+		line-height: 1.277777777777778em;
+	}
+
+	.entry-date {
+		display: none !important;
+	}
+
+	.mkdf-blog-share {
+		display: none !important;
+	}
+
+	.mkdf-tabs .mkdf-tabs-nav li {
+		float: none;
+		margin: 0 auto;
+		padding: 0;
+		display: inline;
+	}
+
+	.mkdf-tabs .mkdf-tabs-nav {
+		text-align: center;
+	}
+
+	.mkdf-tabs.mkdf-tabs-standard .mkdf-tab-container {
+		line-height: 40px;
+	}
+
+
+	.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined {
+		background-color: #6f2e2e;
+	}
+
+	.mkdf-main-menu>ul>li>a>span.item_outer:before {
+		background-color: #6f2e2e;
+	}
+
+	.mkdf-drop-down .second .inner ul li a .item_outer:before {
+		background-color: #6f2e2e;
+	}
 
-  .mkdf-section-title-holder.mkdf-st-split .mkdf-st-tagline {
-    color: #6f2e2e;
-  }
+	.mkdf-section-title-holder.mkdf-st-split .mkdf-st-tagline {
+		color: #6f2e2e;
+	}
 
-  #mkdf-back-to-top>span {
-    background-color: #6f2e2e;
-    border: 1px solid #6f2e2e;
-  }
+	#mkdf-back-to-top>span {
+		background-color: #6f2e2e;
+		border: 1px solid #6f2e2e;
+	}
 
-  .mkdf-section-title-holder .mkdf-st-tagline {
-    color: #6f2e2e;
-    font-weight: 800;
-  }
+	.mkdf-section-title-holder .mkdf-st-tagline {
+		color: #6f2e2e;
+		font-weight: 800;
+	}
 
-  .mkdf-btn.mkdf-btn-predefined {
-    background-color: #6f2e2e;
-    border: 1px solid #6f2e2e;
-  }
+	.mkdf-btn.mkdf-btn-predefined {
+		background-color: #6f2e2e;
+		border: 1px solid #6f2e2e;
+	}
 
-  .mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-image:before {
-    -webkit-text-stroke: 2px #6f2e2e;
-  }
+	.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-image:before {
+		-webkit-text-stroke: 2px #6f2e2e;
+	}
 
-  .mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-author .mkdf-testimonials-author-job {
-    color: #6f2e2e;
-  }
+	.mkdf-testimonials-holder.mkdf-testimonials-standard .mkdf-testimonial-author .mkdf-testimonials-author-job {
+		color: #6f2e2e;
+	}
 
-  .mkdf-item-showcase-specific-holder .mkdf-iss-tagline {
-    color: #6f2e2e;
-  }
+	.mkdf-item-showcase-specific-holder .mkdf-iss-tagline {
+		color: #6f2e2e;
+	}
 
-  .mkdf-item-showcase-specific-holder .mkdf-iss-second-image-holder .mkdf-angle {
-    border: 1px solid #6f2e2e;
-  }
+	.mkdf-item-showcase-specific-holder .mkdf-iss-second-image-holder .mkdf-angle {
+		border: 1px solid #6f2e2e;
+	}
 
-  a.mkdf-icon-widget-holder:hover .mkdf-icon-text {
-    color: #6f2e2e !important;
-  }
+	a.mkdf-icon-widget-holder:hover .mkdf-icon-text {
+		color: #6f2e2e !important;
+	}
 
-  .mkdf-page-footer .widget a:hover {
-    color: #6f2e2e;
-  }
+	.mkdf-page-footer .widget a:hover {
+		color: #6f2e2e;
+	}
 
-  .mkdf-title-holder.mkdf-standard-type .mkdf-page-subtitle {
-    color: #fff;
-  }
+	.mkdf-title-holder.mkdf-standard-type .mkdf-page-subtitle {
+		color: #fff;
+	}
 
-  .mkdf-iwt:hover .mkdf-iwt-title-text {
-    color: #6f2e2e;
-  }
+	.mkdf-iwt:hover .mkdf-iwt-title-text {
+		color: #6f2e2e;
+	}
 
-  .mkdf-title-holder.mkdf-standard-type .mkdf-page-subtitle {
-    color: #fff;
-  }
+	.mkdf-title-holder.mkdf-standard-type .mkdf-page-subtitle {
+		color: #fff;
+	}
 
-  .mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li.ui-state-active a,
-  .mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li.ui-state-hover a {
-    background-color: #6f2e2e;
-  }
+	.mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li.ui-state-active a,
+	.mkdf-tabs.mkdf-tabs-standard .mkdf-tabs-nav li.ui-state-hover a {
+		background-color: #6f2e2e;
+	}
 
-  .mkdf-item-showcase-specific-holder .mkdf-iss-additional-link-holder a:hover {
-    color: #6f2e2e;
-  }
+	.mkdf-item-showcase-specific-holder .mkdf-iss-additional-link-holder a:hover {
+		color: #6f2e2e;
+	}
 
-  .mkdf-cf7-custom-style label {
-    color: #6f2e2e;
-  }
+	.mkdf-cf7-custom-style label {
+		color: #6f2e2e;
+	}
 
-  .mkdf-btn.mkdf-btn-solid {
-    background-color: #6f2e2e;
-    border: 1px solid #6f2e2e;
-  }
+	.mkdf-btn.mkdf-btn-solid {
+		background-color: #6f2e2e;
+		border: 1px solid #6f2e2e;
+	}
 
-  .mkdf-iwt.mkdf-iwt-icon-left:hover .mkdf-iwt-text {
-    color: #6f2e2e;
-  }
+	.mkdf-iwt.mkdf-iwt-icon-left:hover .mkdf-iwt-text {
+		color: #6f2e2e;
+	}
 
-  .mkdf-team-holder .mkdf-team-info {
-    text-align: center;
-  }
+	.mkdf-team-holder .mkdf-team-info {
+		text-align: center;
+	}
 
-  .mkdf-team-holder {
-    margin-bottom: 50px;
-  }
+	.mkdf-team-holder {
+		margin-bottom: 50px;
+	}
 
-  .mkdf-team-holder .mkdf-team-position {
-    color: #6f2e2e;
-  }
+	.mkdf-team-holder .mkdf-team-position {
+		color: #6f2e2e;
+	}
 
-  .mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-text {
-    font-size: 15px;
-  }
+	.mkdf-item-showcase-holder .mkdf-is-item .mkdf-is-text {
+		font-size: 15px;
+	}
 
 
 
@@ -303,345 +306,345 @@
 
 
 
-  .mkdf-page-header {
-    background: rgba(256, 256, 256, 0.3);
-  }
+	.mkdf-page-header {
+		background: rgba(256, 256, 256, 0.3);
+	}
 
-  .mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-prices {
-    display: none;
-  }
+	.mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-prices {
+		display: none;
+	}
 
-  .mkdf-price-table .mkdf-pt-inner ul li {
-    margin: 0;
-    padding: 17px 5%;
-  }
+	.mkdf-price-table .mkdf-pt-inner ul li {
+		margin: 0;
+		padding: 17px 5%;
+	}
 
-  .mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-content {
-    padding-top: 12px;
-    padding-bottom: 40px;
-  }
+	.mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-content {
+		padding-top: 12px;
+		padding-bottom: 40px;
+	}
 
-  .mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-title-holder {
-    position: relative;
-    padding: 49px 5% 0;
-  }
+	.mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-title-holder {
+		position: relative;
+		padding: 49px 5% 0;
+	}
 
-  .mkdf-icon-shortcode .mkdf-icon-element {
-    color: #6f2e2e !important;
-  }
+	.mkdf-icon-shortcode .mkdf-icon-element {
+		color: #6f2e2e !important;
+	}
 
-  .mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-title-holder .mkdf-pt-title {
-    font-size: 20px !important;
-  }
+	.mkdf-price-table .mkdf-pt-inner ul li.mkdf-pt-title-holder .mkdf-pt-title {
+		font-size: 20px !important;
+	}
 
 
-  .mkdf-sticky-header .mkdf-sticky-holder .mkdf-logo-wrapper a {
-    max-height: 55px;
-  }
+	.mkdf-sticky-header .mkdf-sticky-holder .mkdf-logo-wrapper a {
+		max-height: 55px;
+	}
 
-  .mkdf-page-header .mkdf-menu-area {
-    background-color: rgba(255, 255, 255, 0.0%) !important;
-  }
+	.mkdf-page-header .mkdf-menu-area {
+		background-color: rgba(255, 255, 255, 0.0%) !important;
+	}
 
-  .mkdf-page-header {
-    background: rgba(256, 256, 256, 0.0) !important;
-  }
+	.mkdf-page-header {
+		background: rgba(256, 256, 256, 0.0) !important;
+	}
 
 
 
 
-  .trailer-custm-padng {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    background-color: #f5f5f5;
-  }
+	.trailer-custm-padng {
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-top: 150px;
+		padding-bottom: 150px;
+		background-color: #f5f5f5;
+	}
 
-  @media screen and (max-width: 676px) {
-    .trailer-custm-padng {
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 30px;
-      padding-bottom: 50px;
-      background-color: #f5f5f5;
-    }
-  }
+	@media screen and (max-width: 676px) {
+		.trailer-custm-padng {
+			padding-left: 25px;
+			padding-right: 25px;
+			padding-top: 30px;
+			padding-bottom: 50px;
+			background-color: #f5f5f5;
+		}
+	}
 
 
-  @media screen and (min-width: 1171px) and (max-width: 1275px) {
-    .mkdf-main-menu>ul>li>a {
-      padding-left: 13px !important;
-      padding-right: 13px !important;
-    }
-  }
+	@media screen and (min-width: 1171px) and (max-width: 1275px) {
+		.mkdf-main-menu>ul>li>a {
+			padding-left: 13px !important;
+			padding-right: 13px !important;
+		}
+	}
 
 
 
-  @media screen and (min-width: 1025px) and (max-width: 1170px) {
-    .mkdf-main-menu>ul>li>a {
-      padding-left: 7px !important;
-      padding-right: 7px !important;
-    }
+	@media screen and (min-width: 1025px) and (max-width: 1170px) {
+		.mkdf-main-menu>ul>li>a {
+			padding-left: 7px !important;
+			padding-right: 7px !important;
+		}
 
-    .mkdf-main-menu ul li a {
-      font-size: 14px !important;
-    }
-  }
+		.mkdf-main-menu ul li a {
+			font-size: 14px !important;
+		}
+	}
 
-  .mkdf-mobile-header .mkdf-mobile-logo-wrapper a {
-    display: block;
-    height: 50px !important;
-  }
+	.mkdf-mobile-header .mkdf-mobile-logo-wrapper a {
+		display: block;
+		height: 50px !important;
+	}
 
 
 
-  .spclbtn {
-    clear: both;
-    float: none;
-    text-align: center;
-    margin: 30px auto 5px !important;
-    display: table;
-  }
+	.spclbtn {
+		clear: both;
+		float: none;
+		text-align: center;
+		margin: 30px auto 5px !important;
+		display: table;
+	}
 
 
-  .mkdf-main-menu>ul>li>a {
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-  }
+	.mkdf-main-menu>ul>li>a {
+		padding-left: 22px !important;
+		padding-right: 22px !important;
+	}
 
-  @media screen and (min-width: 1031px) and (max-width: 1238px) {
-    .mkdf-main-menu>ul>li>a {
-      padding-left: 10px !important;
-      padding-right: 10px !important;
-      font-size: 13px !important;
-    }
-  }
+	@media screen and (min-width: 1031px) and (max-width: 1238px) {
+		.mkdf-main-menu>ul>li>a {
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+			font-size: 13px !important;
+		}
+	}
 
 
-  .rs-layer .mkdf-btn.mkdf-btn-predefined .mkdf-btn-predefined-line-holder .mkdf-btn-text {
-    padding: 12px 18px 12px 21px !important;
-  }
+	.rs-layer .mkdf-btn.mkdf-btn-predefined .mkdf-btn-predefined-line-holder .mkdf-btn-text {
+		padding: 12px 18px 12px 21px !important;
+	}
 
 
 
-  @media screen and (max-width: 1280px) {
-    .mkdf-side-menu-slide-from-opener .mkdf-side-menu .mkdf-side-menu-holder {
-      padding: 20px 40px !important;
-    }
-  }
+	@media screen and (max-width: 1280px) {
+		.mkdf-side-menu-slide-from-opener .mkdf-side-menu .mkdf-side-menu-holder {
+			padding: 20px 40px !important;
+		}
+	}
 
 
-  .mkdf-side-menu .widget {
-    margin: 0 0 0px;
-    color: grey;
-  }
+	.mkdf-side-menu .widget {
+		margin: 0 0 0px;
+		color: grey;
+	}
 
-  .mkdf-side-menu .widget .mkdf-widget-title {
-    margin: 0 0 10px;
-    color: #000;
-    font-size: 20px;
-  }
+	.mkdf-side-menu .widget .mkdf-widget-title {
+		margin: 0 0 10px;
+		color: #000;
+		font-size: 20px;
+	}
 </style>
 <style type="text/css" data-type="vc_custom-css">
-  .mkdf-cc-bs-nav .vc_column_container {
-    z-index: 50;
-  }
+	.mkdf-cc-bs-nav .vc_column_container {
+		z-index: 50;
+	}
 </style>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
-  .vc_custom_1569322970774 {
-    padding-top: 124px !important;
-    padding-bottom: 0px !important;
-  }
+	.vc_custom_1569322970774 {
+		padding-top: 124px !important;
+		padding-bottom: 0px !important;
+	}
 
-  .vc_custom_1620192587441 {
-    padding-top: 0px !important;
-    padding-bottom: 60px !important;
-  }
+	.vc_custom_1620192587441 {
+		padding-top: 0px !important;
+		padding-bottom: 60px !important;
+	}
 
-  .vc_custom_1620212310085 {
-    padding-top: 10px !important;
-    padding-bottom: 100px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620212310085 {
+		padding-top: 10px !important;
+		padding-bottom: 100px !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620212443778 {
-    padding-top: 150px !important;
-    padding-bottom: 200px !important;
-    background-image: url(wp-content/uploads/2021/05/banner6f54c.jpg?id=2836) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620212443778 {
+		padding-top: 150px !important;
+		padding-bottom: 200px !important;
+		background-image: url(wp-content/uploads/2021/05/banner6f54c.jpg?id=2836) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1569333950981 {
-    padding-top: 120px !important;
-  }
+	.vc_custom_1569333950981 {
+		padding-top: 120px !important;
+	}
 
-  .vc_custom_1620212310085 {
-    padding-top: 10px !important;
-    padding-bottom: 100px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620212310085 {
+		padding-top: 10px !important;
+		padding-bottom: 100px !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620212649233 {
-    padding-top: 150px !important;
-    padding-bottom: 200px !important;
-    background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner8.jpg?id=2841) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620212649233 {
+		padding-top: 150px !important;
+		padding-bottom: 200px !important;
+		background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner8.jpg?id=2841) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620192486417 {
-    padding-bottom: 54px !important;
-  }
+	.vc_custom_1620192486417 {
+		padding-bottom: 54px !important;
+	}
 
-  .vc_custom_1620212948987 {
-    padding-top: 0px !important;
-    padding-bottom: 40px !important;
-  }
+	.vc_custom_1620212948987 {
+		padding-top: 0px !important;
+		padding-bottom: 40px !important;
+	}
 
-  .vc_custom_1622435937545 {
-    margin-bottom: 140px !important;
-    padding-top: 0px !important;
-    padding-bottom: 50px !important;
-  }
+	.vc_custom_1622435937545 {
+		margin-bottom: 140px !important;
+		padding-top: 0px !important;
+		padding-bottom: 50px !important;
+	}
 
-  .vc_custom_1620212742459 {
-    margin-top: 140px !important;
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-  }
+	.vc_custom_1620212742459 {
+		margin-top: 140px !important;
+		padding-top: 100px !important;
+		padding-bottom: 100px !important;
+	}
 
-  .vc_custom_1620212310085 {
-    padding-top: 10px !important;
-    padding-bottom: 100px !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620212310085 {
+		padding-top: 10px !important;
+		padding-bottom: 100px !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620212919916 {
-    padding-top: 60px !important;
-    padding-bottom: 125px !important;
-    background-position: 0 0 !important;
-    background-repeat: no-repeat !important;
-  }
+	.vc_custom_1620212919916 {
+		padding-top: 60px !important;
+		padding-bottom: 125px !important;
+		background-position: 0 0 !important;
+		background-repeat: no-repeat !important;
+	}
 
-  .vc_custom_1620206311539 {
-    padding-bottom: 75px !important;
-  }
+	.vc_custom_1620206311539 {
+		padding-bottom: 75px !important;
+	}
 
-  .vc_custom_1620719404361 {
-    margin-bottom: 15px !important;
-  }
+	.vc_custom_1620719404361 {
+		margin-bottom: 15px !important;
+	}
 
-  .vc_custom_1620719414006 {
-    margin-bottom: 15px !important;
-  }
+	.vc_custom_1620719414006 {
+		margin-bottom: 15px !important;
+	}
 
-  .vc_custom_1620719424617 {
-    margin-bottom: 15px !important;
-  }
+	.vc_custom_1620719424617 {
+		margin-bottom: 15px !important;
+	}
 
-  .vc_custom_1568214570781 {
-    margin-left: 0px !important;
-    padding-left: 0px !important;
-  }
+	.vc_custom_1568214570781 {
+		margin-left: 0px !important;
+		padding-left: 0px !important;
+	}
 
-  .vc_custom_1620727299168 {
-    background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner.jpg?id=3026) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620727299168 {
+		background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner.jpg?id=3026) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620824159101 {
-    padding-top: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0px !important;
-    padding-left: 0px !important;
-    background-color: #f5f5f5 !important;
-  }
+	.vc_custom_1620824159101 {
+		padding-top: 0px !important;
+		padding-right: 0px !important;
+		padding-bottom: 0px !important;
+		padding-left: 0px !important;
+		background-color: #f5f5f5 !important;
+	}
 
-  .vc_custom_1620823746845 {
-    padding-right: 0px !important;
-  }
+	.vc_custom_1620823746845 {
+		padding-right: 0px !important;
+	}
 
-  .vc_custom_1620196715517 {
-    padding-right: 60px !important;
-  }
+	.vc_custom_1620196715517 {
+		padding-right: 60px !important;
+	}
 
-  .vc_custom_1568645480959 {
-    padding-top: 0px !important;
-    padding-bottom: 122px !important;
-  }
+	.vc_custom_1568645480959 {
+		padding-top: 0px !important;
+		padding-bottom: 122px !important;
+	}
 
-  .vc_custom_1620824293378 {
-    padding-top: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0px !important;
-    padding-left: 0px !important;
-    background-color: #f5f5f5 !important;
-  }
+	.vc_custom_1620824293378 {
+		padding-top: 0px !important;
+		padding-right: 0px !important;
+		padding-bottom: 0px !important;
+		padding-left: 0px !important;
+		background-color: #f5f5f5 !important;
+	}
 
-  .vc_custom_1620734380812 {
-    background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner6-1.jpg?id=3048) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620734380812 {
+		background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner6-1.jpg?id=3048) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620824287968 {
-    padding-right: 0px !important;
-  }
+	.vc_custom_1620824287968 {
+		padding-right: 0px !important;
+	}
 
-  .vc_custom_1620197298902 {
-    padding-right: 60px !important;
-  }
+	.vc_custom_1620197298902 {
+		padding-right: 60px !important;
+	}
 
-  .vc_custom_1569413776929 {
-    margin-bottom: -90px !important;
-  }
+	.vc_custom_1569413776929 {
+		margin-bottom: -90px !important;
+	}
 
-  .vc_custom_1567429896531 {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-  }
+	.vc_custom_1567429896531 {
+		padding-top: 100px !important;
+		padding-bottom: 100px !important;
+	}
 
-  .vc_custom_1620213337105 {
-    background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner21.jpg?id=2942) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-  }
+	.vc_custom_1620213337105 {
+		background-image: url(https://foodtraileronline.co.nz/wp-content/uploads/2021/05/banner21.jpg?id=2942) !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
 
-  .vc_custom_1620824318628 {
-    padding-top: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0px !important;
-    padding-left: 0px !important;
-    background-color: #f5f5f5 !important;
-  }
+	.vc_custom_1620824318628 {
+		padding-top: 0px !important;
+		padding-right: 0px !important;
+		padding-bottom: 0px !important;
+		padding-left: 0px !important;
+		background-color: #f5f5f5 !important;
+	}
 
-  .vc_custom_1569413378447 {
-    padding-top: 7px !important;
-  }
+	.vc_custom_1569413378447 {
+		padding-top: 7px !important;
+	}
 
-  .vc_custom_1567499344778 {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-  }
+	.vc_custom_1567499344778 {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
 </style>
 <noscript>
-  <style>
-    .wpb_animate_when_almost_visible {
-      opacity: 1;
-    }
-  </style>
+	<style>
+		.wpb_animate_when_almost_visible {
+			opacity: 1;
+		}
+	</style>
 </noscript>
