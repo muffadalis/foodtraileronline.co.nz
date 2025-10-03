@@ -29,7 +29,7 @@ jobs:
           extended: true
 
       - name: Build Hugo site
-        run: hugo --minify --baseURL="https://muffadalis.github.io/foodtraileronline.co.nz/"
+        run: hugo --minify --baseURL="https://muffadalis.github.io/foodtraileronline.co.nz/" --relativeURLs
 
       - name: List build output
         run: ls -R public
