@@ -1,0 +1,37 @@
+{{- $pctx := . }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }} - Product Feed</title>
+    <link>{{ .Site.BaseURL }}</link>
+    <description>Latest products from {{ .Site.Title }}</description>
+    <language>{{ .Site.Language.Lang }}</language>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
+
+    <atom:link href="{{ .Site.BaseURL }}rss.xml" rel="self" type="application/rss+xml"/>
+
+    {{ range sort (where .Site.RegularPages "Section" "our-trailers") "Weight" "asc" }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+      <description>
+        <img src="{{ .Params.thumbnail_image | relURL }}" alt="{{ .Title }}" />
+        {{ .Params.description }}
+        {{ .Content }}
+        {{ with .Params.specs }}
+        {{ range . }}
+        <h3>{{ .category }}</h3>
+        <ul>
+            {{ range .items }}
+            <li>{{ . }}</li>
+            {{ end}}
+        </ul>
+        {{ end }}
+        {{ end }}
+      </description>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

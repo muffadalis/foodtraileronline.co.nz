@@ -1,6 +1,13 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Food Trailer Manufacturer and Supplier in New Zealand'
-[params]
-  email = "info@foodtraileronline.co.nz"
-  phone = "+64 22 539 1515"
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+    isPlainText = false
+    notAlternative = true
