@@ -1,10 +1,10 @@
 {{ define "main" }}
 
 <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-window-top mkdf-preload-background mkdf-has-bg-image mkdf-bg-parallax"
-    style="height: 650px;background-color: #f5f5f5;background-image:url({{ .Params.banner_image | relURL }});"
+    style="height: 650px;background-color: #f5f5f5;background-image:url({{ .Params.banner_image | absURL  }});"
     data-height="650">
     <div class="mkdf-title-image">
-        <img itemprop="image" src="{{ .Params.banner_image | relURL }}" />
+        <img itemprop="image" src="{{ .Params.banner_image | absURL }}" />
     </div>
     <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
