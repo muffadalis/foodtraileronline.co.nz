@@ -339,6 +339,7 @@
                       </div>
                     </div>
                     <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1620206311539">
+                      {{  range sort (where .Site.RegularPages "Section" "our-trailers") "Weight"  }}
                       <div class="wpb_column vc_column_container vc_col-sm-4">
                         <div class="vc_column-inner">
                           <div class="wpb_wrapper">
@@ -347,136 +348,36 @@
                               <figure class="wpb_wrapper vc_figure">
                                 <div class="vc_single_image-wrapper   vc_box_border_grey">
                                   <img fetchpriority="high" decoding="async" width="1300" height="950"
-                                    src="wp-content/uploads/2021/05/round.jpg"
+                                    src="{{ .Params.thumbnail_image | relURL }}" alt="{{ .Title }}"
                                     class="vc_single_image-img attachment-full" alt=""
-                                    srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/round.jpg 1300w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/round-300x219.jpg 300w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/round-1024x748.jpg 1024w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/round-768x561.jpg 768w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/round-600x438.jpg 600w"
                                     sizes="(max-width: 1300px) 100vw, 1300px" />
                                 </div>
                               </figure>
                             </div>
-
                             <div class="wpb_text_column wpb_content_element  vc_custom_1620719404361">
                               <div class="wpb_wrapper">
-                                <h4>ROUND TRAILERS</h4>
-                                <p>With a lovely appearance, solid
-                                  construction, convenience and
-                                  cost-effectiveness, the Round
-                                  Trailers are unique and
-                                  custom-built to meet the needs
-                                  of the client.</p>
-
+                                <h4>{{ .Title }}</h4>
+                                <p>{{ .Params.description }}</p>
                               </div>
                             </div>
-                            <a itemprop="url" href="round-trailers/index.html" target="_self"
+                            <a itemprop="url" href="{{ .RelPermalink }}" target="_self"
                               style="color: #000000;background-color: rgba(255,255,255,0.01);border-color: #0a0a0a"
                               class="mkdf-btn mkdf-btn-medium mkdf-btn-predefined mkdf-btn-custom-hover-bg mkdf-btn-custom-border-hover mkdf-btn-custom-hover-color"
                               data-hover-color="#000000" data-hover-bg-color="rgba(255,255,255,0.01)"
                               data-hover-border-color="#0a0a0a">
                               <span class="mkdf-btn-predefined-line-holder">
                                 <span class="mkdf-btn-line-hidden"></span>
-                                <span class="mkdf-btn-text">Read
-                                  more</span>
+                                <span class="mkdf-btn-text">Read more</span>
                                 <span class="mkdf-btn-line"></span>
                                 <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
                               </span>
                             </a>
                             <div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span>
                             </div>
-                          </div>
+                          </div>                        
                         </div>
                       </div>
-                      <div class="wpb_column vc_column_container vc_col-sm-4">
-                        <div class="vc_column-inner">
-                          <div class="wpb_wrapper">
-                            <div class="wpb_single_image wpb_content_element vc_align_center">
-
-                              <figure class="wpb_wrapper vc_figure">
-                                <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                  <img decoding="async" width="1300" height="950"
-                                    src="wp-content/uploads/2019/09/banner3.jpg"
-                                    class="vc_single_image-img attachment-full" alt=""
-                                    srcset="https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner3.jpg 1300w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner3-300x219.jpg 300w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner3-1024x748.jpg 1024w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner3-768x561.jpg 768w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner3-600x438.jpg 600w"
-                                    sizes="(max-width: 1300px) 100vw, 1300px" />
-                                </div>
-                              </figure>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1620719414006">
-                              <div class="wpb_wrapper">
-                                <h4>BOX TRAILERS</h4>
-                                <p>The Box Trailer still remain the
-                                  mainstay of the fast-food world.
-                                  We pride ourselves on our solid
-                                  construction, competitive
-                                  pricing and unwavering safety
-                                  standards.</p>
-
-                              </div>
-                            </div>
-                            <a itemprop="url" href="box-trailers/index.html" target="_self"
-                              style="color: #000000;background-color: rgba(255,255,255,0.01);border-color: #0a0a0a"
-                              class="mkdf-btn mkdf-btn-medium mkdf-btn-predefined mkdf-btn-custom-hover-bg mkdf-btn-custom-border-hover mkdf-btn-custom-hover-color"
-                              data-hover-color="#000000" data-hover-bg-color="rgba(255,255,255,0.01)"
-                              data-hover-border-color="#0a0a0a">
-                              <span class="mkdf-btn-predefined-line-holder">
-                                <span class="mkdf-btn-line-hidden"></span>
-                                <span class="mkdf-btn-text">Read
-                                  more</span>
-                                <span class="mkdf-btn-line"></span>
-                                <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                              </span>
-                            </a>
-                            <div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="wpb_column vc_column_container vc_col-sm-4">
-                        <div class="vc_column-inner">
-                          <div class="wpb_wrapper">
-                            <div class="wpb_single_image wpb_content_element vc_align_center">
-
-                              <figure class="wpb_wrapper vc_figure">
-                                <div class="vc_single_image-wrapper   vc_box_border_grey">
-                                  <img decoding="async" width="1300" height="950"
-                                    src="wp-content/uploads/2019/09/banner2.jpg"
-                                    class="vc_single_image-img attachment-full" alt=""
-                                    srcset="https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner2.jpg 1300w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner2-300x219.jpg 300w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner2-1024x748.jpg 1024w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner2-768x561.jpg 768w, https://foodtraileronline.co.nz/wp-content/uploads/2019/09/banner2-600x438.jpg 600w"
-                                    sizes="(max-width: 1300px) 100vw, 1300px" />
-                                </div>
-                              </figure>
-                            </div>
-
-                            <div class="wpb_text_column wpb_content_element  vc_custom_1620719424617">
-                              <div class="wpb_wrapper">
-                                <h4>STEEL TRAILERS</h4>
-                                <p>The hottest trend in the food
-                                  trailer business. With a
-                                  stunning and trendy retro
-                                  design, our builds offer
-                                  top-of-the-line amenities,
-                                  safety and reliability.</p>
-
-                              </div>
-                            </div>
-                            <a itemprop="url" href="steel-trailer/index.html" target="_self"
-                              style="color: #000000;background-color: rgba(255,255,255,0.01);border-color: #0a0a0a"
-                              class="mkdf-btn mkdf-btn-medium mkdf-btn-predefined mkdf-btn-custom-hover-bg mkdf-btn-custom-border-hover mkdf-btn-custom-hover-color"
-                              data-hover-color="#000000" data-hover-bg-color="rgba(255,255,255,0.01)"
-                              data-hover-border-color="#0a0a0a">
-                              <span class="mkdf-btn-predefined-line-holder">
-                                <span class="mkdf-btn-line-hidden"></span>
-                                <span class="mkdf-btn-text">Read
-                                  more</span>
-                                <span class="mkdf-btn-line"></span>
-                                <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                              </span>
-                            </a>
-                            <div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      {{ end }}
                     </div>
                   </div>
                 </div>
