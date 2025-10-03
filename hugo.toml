@@ -1,6 +1,8 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Food Trailer Manufacturer and Supplier in New Zealand'
+relativeURLs = true
+canonifyURLs = false
 
 [outputs]
 home = ["HTML", "RSS"]
