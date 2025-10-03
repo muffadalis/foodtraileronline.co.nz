@@ -1,8 +1,9 @@
+{{ $color := .color | default "#6f2e2e" }}
 <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
 <div class="mkdf-iwt clearfix  mkdf-iwt-icon-left mkdf-iwt-icon-tiny mkdf-has-appear-animation">
         <div class="mkdf-iwt-icon">
-            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="#6f2e2e">
-                <span aria-hidden="true" class="mkdf-icon-font-elegant mkdf-icon-element icon_clock_alt" style="color: #6f2e2e"></span></span>
+            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="{{ $color }}">
+                <span aria-hidden="true" class="mkdf-icon-font-elegant mkdf-icon-element icon_clock_alt" style="color: {{ $color }}"></span></span>
         </div>
         <div class="mkdf-iwt-content" style="padding-left: 16px">
             <p class="mkdf-iwt-text" style="margin-top: 0px">
@@ -14,9 +15,9 @@
 <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
 <div class="mkdf-iwt clearfix  mkdf-iwt-icon-left mkdf-iwt-icon-tiny mkdf-has-appear-animation">
     <div class="mkdf-iwt-icon">
-        <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="#6f2e2e">
+        <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="{{ $color }}">
             <span aria-hidden="true" class="mkdf-icon-font-elegant icon_pin_alt mkdf-icon-element"
-                style="color: #6f2e2e"></span> </span>
+                style="color: {{ $color }}"></span> </span>
     </div>
     <div class="mkdf-iwt-content" style="padding-left: 16px">
         <p class="mkdf-iwt-text" style="margin-top: 0px">Food Trailer Online, Auckland, New Zealand.</p>
@@ -24,27 +25,27 @@
 </div>
 <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
 <div class="mkdf-iwt clearfix  mkdf-iwt-icon-left mkdf-iwt-icon-tiny mkdf-has-appear-animation">
-    <a itemprop="url" href="tel:{{ .Site.Params.phone }}" target="_self">
+    <a itemprop="url" href="tel:+64 22 539 1515" target="_self">
         <div class="mkdf-iwt-icon">
-            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="#6f2e2e">
+            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="{{ $color }}">
                 <span aria-hidden="true" class="mkdf-icon-font-elegant icon_phone mkdf-icon-element"
-                    style="color: #6f2e2e"></span></span>
+                    style="color: {{ $color }}"></span></span>
         </div>
         <div class="mkdf-iwt-content" style="padding-left: 16px">
-            <p class="mkdf-iwt-text" style="margin-top: 0px">{{ .Site.Params.phone }}</p>
+            <p class="mkdf-iwt-text" style="margin-top: 0px">+64 22 539 1515</p>
         </div>
     </a>
 </div>
 <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
 <div class="mkdf-iwt clearfix  mkdf-iwt-icon-left mkdf-iwt-icon-tiny mkdf-has-appear-animation">
-    <a href="mailto:{{ .Site.Params.email }}">
+    <a href="mailto:info@foodtraileronline.co.nz">
         <div class="mkdf-iwt-icon">
-            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="#6f2e2e">
-                <span aria-hidden="true" class="mkdf-icon-font-elegant icon_mail_alt mkdf-icon-element" style="color: #6f2e2e"></span></span>
+            <span class="mkdf-icon-shortcode mkdf-normal mkdf-icon-tiny" data-color="{{ $color }}">
+                <span aria-hidden="true" class="mkdf-icon-font-elegant icon_mail_alt mkdf-icon-element" style="color: {{ $color }}"></span></span>
         </div>
         <div class="mkdf-iwt-content" style="padding-left: 16px">
             <p class="mkdf-iwt-text" style="margin-top: 0px">
-                {{ .Site.Params.email }}
+                info@foodtraileronline.co.nz
             </p>
         </div>
     </a>
