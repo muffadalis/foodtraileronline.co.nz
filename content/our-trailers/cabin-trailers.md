@@ -2,7 +2,7 @@
 title: "Cabin Trailers"
 weight: 4
 description: "Our Cabin Trailers provide a comfortable, mobile living space perfect for long-term use. Custom-built with modern amenities, they are designed to offer maximum comfort and durability."
-thumbnail_image: "wp-content/uploads/2024/09/cabin.jpg"
+thumbnail_image: "wp-content/uploads/2024/09/c6.jpg"
 banner_image: "wp-content/uploads/2024/09/cabin.jpg"
 sizes:
 - 2.5M Long x 2.1M Wide x2.1M Height
