@@ -63,241 +63,45 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                            <div class="wpb_column vc_column_container vc_col-sm-4">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img fetchpriority="high" decoding="async"
-                                                                        width="490" height="380"
-                                                                        src="../wp-content/uploads/2021/05/Salt-Street-Food-Masterton.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Salt-Street-Food-Masterton.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Salt-Street-Food-Masterton-300x233.jpeg 300w"
-                                                                        sizes="(max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        MASTERTON</h6>
-                                                                    <h4 class="mkdf-team-name">Salt
-                                                                        Street Food</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img decoding="async" width="490" height="380"
-                                                                        src="../wp-content/uploads/2021/05/Noeline-WildKrafty-Nelson.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Noeline-WildKrafty-Nelson.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Noeline-WildKrafty-Nelson-300x233.jpeg 300w"
-                                                                        sizes="(max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        FOOD TRAILER</h6>
-                                                                    <h4 class="mkdf-team-name">
-                                                                        Noeline WildKrafty Nelson
-                                                                    </h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img decoding="async" width="490" height="380"
-                                                                        src="../wp-content/uploads/2021/05/Boss-Going-from-Kitchen-Boss-Auckland.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Boss-Going-from-Kitchen-Boss-Auckland.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Boss-Going-from-Kitchen-Boss-Auckland-300x233.jpeg 300w"
-                                                                        sizes="(max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        AUCKLAND</h6>
-                                                                    <h4 class="mkdf-team-name">Boss
-                                                                        Going from Kitchen Boss</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Shahul-Pareeth.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Shahul-Pareeth.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Shahul-Pareeth-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        FOOD TRAILER</h6>
-                                                                    <h4 class="mkdf-team-name">
-                                                                        Shahul Pareeth</h4>
+                                        <div class="mkdf-row-grid-section-wrapper ">
+                                            <div class="mkdf-row-grid-section">
+                                                <div class="vc_row wpb_row vc_row-fluid">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="mkdf-image-gallery mkdf-grid-list mkdf-disable-bottom-space  mkdf-ig-grid-type mkdf-three-columns mkdf-normal-space  mkdf-image-behavior-lightbox ">
+                                                                    <div class="mkdf-ig-inner mkdf-outer-space">
+                                                                    {{ with .Params.customers }}
+                                                                    {{ range . }}
+                                                                    <div class="mkdf-ig-image mkdf-item-space mkdf-team-holder mkdf-team-info-below-image">
+                                                                        <div class="mkdf-ig-image-inner mkdf-team-inner">
+                                                                            <a itemprop="image" class="mkdf-ig-lightbox" data-rel="prettyPhoto[image_gallery_appliances]"
+                                                                                href="{{ .photo | relURL }}">
+                                                                                <img fetchpriority="high"
+                                                                                    loading="lazy" decoding="async" width="800"
+                                                                                    height="600"
+                                                                                    src="{{ .photo | relURL }}"
+                                                                                    class="attachment-full size-full"
+                                                                                    alt=""
+                                                                                    sizes="(max-width: 800px) 100vw, 800px" />
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="mkdf-team-info">
+                                                                            <h6 class="mkdf-team-position">{{ .location }}</h6>
+                                                                            <h4 class="mkdf-team-name">{{ .name }}</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    {{ end }}
+                                                                    {{ end }}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container vc_col-sm-4">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Gill-from-Green-House.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Gill-from-Green-House.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Gill-from-Green-House-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        SALADS. SMOOTHIES</h6>
-                                                                    <h4 class="mkdf-team-name">Gill
-                                                                        from Green House</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Tradies-Food-Queenstown.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Tradies-Food-Queenstown.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Tradies-Food-Queenstown-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        QUEENSTOWN</h6>
-                                                                    <h4 class="mkdf-team-name">
-                                                                        Tradies Food</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/James-Tangitamaiti-from-Wellington.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/James-Tangitamaiti-from-Wellington.jpg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/James-Tangitamaiti-from-Wellington-300x233.jpg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        WELLINGTON</h6>
-                                                                    <h4 class="mkdf-team-name">James
-                                                                        Tangitamaiti</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Rachel.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Rachel.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Rachel-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        ROUND TRAILER</h6>
-                                                                    <h4 class="mkdf-team-name">
-                                                                        Rachel</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container vc_col-sm-4">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Sanjeeva.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Sanjeeva.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Sanjeeva-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        FOOD TRAILER</h6>
-                                                                    <h4 class="mkdf-team-name">
-                                                                        Sanjeeva</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Ready-to-be-shipped-to-Australia.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Ready-to-be-shipped-to-Australia.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Ready-to-be-shipped-to-Australia-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        AUSTRALIA</h6>
-                                                                    <h4 class="mkdf-team-name">Ready
-                                                                        for Shipping</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Jacky-Luciano.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Jacky-Luciano.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Jacky-Luciano-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        ROUND TRAILER</h6>
-                                                                    <h4 class="mkdf-team-name">Jacky
-                                                                        &amp; Luciano!!!</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mkdf-team-holder mkdf-team-info-below-image">
-                                                            <div class="mkdf-team-inner">
-                                                                <div class="mkdf-team-image">
-                                                                    <img loading="lazy" decoding="async" width="490"
-                                                                        height="380"
-                                                                        src="../wp-content/uploads/2021/05/Barry-Foley-from-Tawa-Pub-Wellington.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        srcset="https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Barry-Foley-from-Tawa-Pub-Wellington.jpeg 490w, https://foodtraileronline.co.nz/wp-content/uploads/2021/05/Barry-Foley-from-Tawa-Pub-Wellington-300x233.jpeg 300w"
-                                                                        sizes="auto, (max-width: 490px) 100vw, 490px" />
-                                                                </div>
-                                                                <div class="mkdf-team-info">
-                                                                    <h6 class="mkdf-team-position">
-                                                                        WELLINGTON</h6>
-                                                                    <h4 class="mkdf-team-name">Barry
-                                                                        Foley from Tawa Pub</h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
