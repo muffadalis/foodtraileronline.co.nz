@@ -1,6 +1,28 @@
 {{ define "main" }}
-  <div class="single-content">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+<div class="mkdf-full-width">
+  <div class="mkdf-full-width-inner">
+    <div class="mkdf-grid-row">
+      <div class="mkdf-page-content-holder mkdf-grid-col-12">
+        <div class="mkdf-row-grid-section-wrapper ">
+          <div class="mkdf-row-grid-section">
+            <div class="vc_row wpb_row vc_row-fluid vc_custom_1568904237557 vc_row-has-fill">
+              <div class="mkdf-vertical-lines">
+                <span class="mkdf-vertical-line"></span>
+                <span class="mkdf-vertical-line"></span>
+                <span class="mkdf-vertical-line"></span>
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    {{ .Content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 {{ end }}
