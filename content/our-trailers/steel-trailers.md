@@ -4,6 +4,10 @@ weight: 3
 description: "The hottest trend in the food trailer business. With a stunning and trendy retro design, our builds offer top-of-the-line amenities, safety and reliability."
 thumbnail_image: "wp-content/uploads/2019/09/banner2.jpg"
 banner_image: "wp-content/uploads/2021/05/banner16.jpg"
+slide_title: "The ultimate trailer, in splendid retro styling"
+slide_description: "Stunning Design and world-class build for maximum space and utility. Roll out in style and take your business to the next level."
+slide_image: "wp-content/uploads/2021/05/slide1.jpg"
+
 sizes:
 - 3.5M Long x 2.2M Wide (Single Axel) - $35,000
 - 4.5M Long x 2.2M Wide - $39,000

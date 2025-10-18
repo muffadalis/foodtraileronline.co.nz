@@ -4,6 +4,10 @@ weight: 2
 description: "The Box Trailer still remain the mainstay of the fast-food world. We pride ourselves on our solid construction, competitive pricing and unwavering safety standards."
 thumbnail_image: "wp-content/uploads/2019/09/banner3.jpg"
 banner_image: "wp-content/uploads/2021/05/banner17.jpg"
+slide_title: "Superior design & quality, built to last"
+slide_description: "Built with the finest materials and designed to maximize utility, tow away in confidence!"
+slide_image: "wp-content/uploads/2021/05/slide3.jpg"
+
 sizes:
 - 3M Long x 2.1M Wide & 2.1M Height - $23,000
 - 3.5M Long x 2.1M Wide & 2.1M Height - $25,000

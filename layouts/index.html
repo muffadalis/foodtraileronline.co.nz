@@ -1,300 +1,38 @@
 {{ define "main" }}
 <div class="mkdf-slider">
   <div class="mkdf-slider-inner">
-
-    <!-- START motorcyclehome1 REVOLUTION SLIDER 6.2.23 -->
-    <p class="rs-p-wp-fix"></p>
-    <rs-module-wrap id="rev_slider_13_1_wrapper" data-source="gallery"
-      style="background:transparent;padding:0;background-image:url(wp-content/uploads/2021/05/slider1.jpg);background-repeat:no-repeat;background-size:cover;background-position:center center;">
-      <rs-module id="rev_slider_13_1" style="" data-version="6.2.23">
-        <rs-slides>
-          <rs-slide data-key="rs-28" data-title="ROUND"
-            data-anim="ei:d;eo:d;s:1000ms;r:0;t:fade;sl:d;">
-            <img src="{{ "wp-content/uploads/2021/05/slider1.jpg" | relURL }}" title="slider1" width="1920" height="1132"
-              class="rev-slidebg" data-no-retina>
-            <!--
-							--><rs-layer id="slider-13-slide-28-layer-2" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,82px,0,0;y:m;yo:-176px,-213px,-204px,-189px;"
-              data-text="w:normal;s:30,14,7,8;l:14,14,7,6;ls:11px,9px,4px,2px;fw:700;a:left,left,center,center;"
-              data-dim="w:80%;" data-frame_0="x:50,42,22,11;" data-frame_1="st:50;sp:500;sR:50;"
-              data-frame_999="o:0;st:w;sR:8450;"
-              style="z-index:9;background-color:rgba(255,255,255,0);font-family:Heebo;text-transform:uppercase;">ROUND TRAILERS
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-28-layer-3" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,244px,0,0;y:m;yo:-38px,-65px,-62px,-89px;"
-              data-text="w:normal;s:91,70,38,45;l:95,65,35,45;fw:700;a:inherit,inherit,center,center;"
-              data-dim="w:80%,80%,421px,315px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:150;sp:500;sR:150;"
-              data-frame_999="o:0;st:w;sR:8350;"
-              style="z-index:10;background-color:rgba(30,30,30,0);font-family:Rajdhani;text-transform:uppercase;">Utility,
-              convenience and bang for your buck!
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-28-layer-4" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,268px,0,0;y:m;yo:111px,69px,74px,51px;"
-              data-text="w:normal;s:35,18,9,15;l:40,30,16,14;fw:300;a:inherit,inherit,center,center;"
-              data-dim="w:80%,468px,255px,298px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:250;sp:500;sR:250;"
-              data-frame_999="o:0;st:w;sR:8250;"
-              style="z-index:11;background-color:rgba(0,0,0,0);font-family:Ubuntu;">The
-              perfect trailer to start your dream project. Robust <br> construction
-              and fully customisable amenities.
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-28-layer-5" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,133px,-115px,0;y:m;yo:236px,195px,200px,166px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:350;sp:500;sR:350;" data-frame_999="o:0;st:w;sR:8150;"
-              style="z-index:12;font-family:Roboto;"><a itemprop="url"
-                  href="{{ "our-trailers/round-trailers" | relURL }}" target="_self" class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
-                  <span class="mkdf-btn-predefined-line-holder">
-                    <span class="mkdf-btn-line-hidden"></span>
-                    <span class="mkdf-btn-text">view more</span>
-                    <span class="mkdf-btn-line"></span>
-                    <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                  </span>
-                </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-28-layer-6" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:908px,363px,115px,0;y:m;yo:236px,195px,200px,240px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:450;sp:600;sR:450;" data-frame_999="o:0;st:w;sR:7950;"
-              style="z-index:13;font-family:Roboto;"><a itemprop="url" href="{{ "contact-us" | relURL }}" target="_self"
-                style="color: #000000;background-color: #ffffff;border-color: #e5e5e5"
-                class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
+    <!-- Swiper -->
+    <div class="swiper main-slider">
+      <div class="swiper-wrapper">
+        {{ range where .Site.RegularPages.ByWeight "Section" "our-trailers" }}
+        <div class="swiper-slide" style="background-image: url('{{ .Params.slide_image | relURL }}');">
+          <div class="slide-content">
+            <!-- <span class="slide-tag">{{ .Title }}</span> -->
+            <h2 class="slide-title">{{ .Title }}</h2>
+            <p class="slide-desc">{{ .Params.slide_description }}</p>
+            <div class="slide-buttons">
+              <a href="{{ .RelPermalink }}" class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
                 <span class="mkdf-btn-predefined-line-holder">
-                  <span class="mkdf-btn-line-hidden"></span>
-                  <span class="mkdf-btn-text">contact us</span>
-                  <span class="mkdf-btn-line"></span>
-                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                </span>
-              </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-28-layer-22" data-type="shape" data-text="w:normal;" data-dim="w:100%;h:100%;"
-              data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_999="o:0;st:w;"
-              style="z-index:8;background-color:rgba(30,30,30,0.3);">
-            </rs-layer><!--
---> </rs-slide>
-          <rs-slide data-key="rs-31" data-title="BOX"
-            data-anim="ei:d;eo:d;s:1000ms;r:0;t:fade;sl:d;">
-            <img src="{{ "wp-content/uploads/2021/05/slide3.jpg" | relURL }}" title="slide3" width="1920" height="1132"
-              class="rev-slidebg" data-no-retina>
-            <!--
-							--><rs-layer id="slider-13-slide-31-layer-2" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,82px,0,0;y:m;yo:-176px,-213px,-204px,-189px;"
-              data-text="w:normal;s:30,14,7,8;l:14,14,7,6;ls:11px,9px,4px,2px;fw:700;a:left,left,center,center;"
-              data-dim="w:80%;" data-frame_0="x:50,42,22,11;" data-frame_1="st:50;sp:500;sR:50;"
-              data-frame_999="o:0;st:w;sR:8450;"
-              style="z-index:9;background-color:rgba(255,255,255,0);font-family:Heebo;text-transform:uppercase;">BOX
-              TRAILERS
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-31-layer-3" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,244px,0,0;y:m;yo:-38px,-65px,-62px,-89px;"
-              data-text="w:normal;s:91,70,38,45;l:95,65,35,45;fw:700;a:inherit,inherit,center,center;"
-              data-dim="w:80%,80%,421px,315px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:150;sp:500;sR:150;"
-              data-frame_999="o:0;st:w;sR:8350;"
-              style="z-index:10;background-color:rgba(30,30,30,0);font-family:Rajdhani;text-transform:uppercase;">Superior
-              design & quality, built to last
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-31-layer-4" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,268px,0,0;y:m;yo:111px,69px,74px,51px;"
-              data-text="w:normal;s:35,18,9,16;l:40,30,16,15;fw:300;a:inherit,inherit,center,center;"
-              data-dim="w:80%,468px,255px,298px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:250;sp:500;sR:250;"
-              data-frame_999="o:0;st:w;sR:8250;"
-              style="z-index:11;background-color:rgba(0,0,0,0);font-family:Ubuntu;">Built
-              with the finest materials and designed to maximize <br> utility, tow
-              away in confidence!
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-31-layer-5" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,133px,-115px,0;y:m;yo:236px,195px,200px,166px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:350;sp:500;sR:350;" data-frame_999="o:0;st:w;sR:8150;"
-              style="z-index:12;font-family:Roboto;"><a itemprop="url" href="{{ "our-trailers/box-trailers" | relURL }}" target="_self"
-                class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
-                <span class="mkdf-btn-predefined-line-holder">
-                  <span class="mkdf-btn-line-hidden"></span>
                   <span class="mkdf-btn-text">view more</span>
-                  <span class="mkdf-btn-line"></span>
-                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
+                  <i class="mkdf-btn-predefined-icon ion-ios-play"></i>
                 </span>
               </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-31-layer-6" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:908px,363px,115px,0;y:m;yo:236px,195px,200px,240px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:450;sp:600;sR:450;" data-frame_999="o:0;st:w;sR:7950;"
-              style="z-index:13;font-family:Roboto;"><a itemprop="url" href="{{ "contact-us" | relURL }}" target="_self"
-                style="color: #000000;background-color: #ffffff;border-color: #e5e5e5"
-                class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
+              <a href="{{ "contact-us" | relURL }}" class="mkdf-btn mkdf-btn-large mkdf-btn-predefined"  style="color: #000000;background-color: #ffffff;border-color: #e5e5e5">
                 <span class="mkdf-btn-predefined-line-holder">
-                  <span class="mkdf-btn-line-hidden"></span>
                   <span class="mkdf-btn-text">contact us</span>
-                  <span class="mkdf-btn-line"></span>
-                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
+                  <i class="mkdf-btn-predefined-icon ion-ios-play"></i>
                 </span>
               </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-31-layer-22" data-type="shape" data-text="w:normal;" data-dim="w:100%;h:100%;"
-              data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_999="o:0;st:w;"
-              style="z-index:8;background-color:rgba(30,30,30,0.3);">
-            </rs-layer><!--
---> </rs-slide>
-          <rs-slide data-key="rs-32" data-title="STEEL"
-            data-anim="ei:d;eo:d;s:1000ms;r:0;t:fade;sl:d;">
-            <img src="{{ "wp-content/uploads/2021/05/slide1.jpg" | relURL }}" title="slide1" width="1920" height="1132"
-              class="rev-slidebg" data-no-retina>
-            <!--
-							--><rs-layer id="slider-13-slide-32-layer-2" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,82px,0,0;y:m;yo:-176px,-213px,-204px,-189px;"
-              data-text="w:normal;s:30,14,7,8;l:14,14,7,6;ls:11px,9px,4px,2px;fw:700;a:left,left,center,center;"
-              data-dim="w:80%;" data-frame_0="x:50,42,22,11;" data-frame_1="st:50;sp:500;sR:50;"
-              data-frame_999="o:0;st:w;sR:8450;"
-              style="z-index:9;background-color:rgba(255,255,255,0);font-family:Heebo;text-transform:uppercase;">STEEL
-              TRAILERS
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-32-layer-3" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:522px,244px,0,0;y:m;yo:-38px,-65px,-62px,-89px;"
-              data-text="w:normal;s:91,70,38,46;l:95,65,35,42;fw:700;a:inherit,inherit,center,center;"
-              data-dim="w:80%,80%,421px,315px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:150;sp:500;sR:150;"
-              data-frame_999="o:0;st:w;sR:8350;"
-              style="z-index:10;background-color:rgba(30,30,30,0);font-family:Rajdhani;text-transform:uppercase;">The
-              ultimate trailer, in splendid retro styling
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-32-layer-4" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,268px,0,0;y:m;yo:111px,69px,74px,51px;"
-              data-text="w:normal;s:35,18,9,14;l:40,30,16,18;fw:300;a:inherit,inherit,center,center;"
-              data-dim="w:80%,468px,255px,298px;" data-frame_0="x:50,42,22,11;" data-frame_1="st:250;sp:500;sR:250;"
-              data-frame_999="o:0;st:w;sR:8250;"
-              style="z-index:11;background-color:rgba(0,0,0,0);font-family:Ubuntu;">Stunning
-              Design and world-class build for maximum space and utility. Roll out in
-              style and take your business to the next level.
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-32-layer-5" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:527px,133px,-115px,0;y:m;yo:236px,195px,200px,166px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:350;sp:500;sR:350;" data-frame_999="o:0;st:w;sR:8150;"
-              style="z-index:12;font-family:Roboto;"><a itemprop="url" href="{{ "our-trailers/steel-trailer" | relURL }}" target="_self"
-                class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
-                <span class="mkdf-btn-predefined-line-holder">
-                  <span class="mkdf-btn-line-hidden"></span>
-                  <span class="mkdf-btn-text">view more</span>
-                  <span class="mkdf-btn-line"></span>
-                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                </span>
-              </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-32-layer-6" data-type="text" data-rsp_ch="on"
-              data-xy="x:c;xo:908px,363px,115px,0;y:m;yo:236px,195px,200px,240px;"
-              data-text="w:normal;s:20,16,8,4;l:25,21,11,6;a:left,left,center,center;" data-dim="w:80%;"
-              data-frame_0="x:50,42,22,11;" data-frame_1="st:450;sp:600;sR:450;" data-frame_999="o:0;st:w;sR:7950;"
-              style="z-index:13;font-family:Roboto;"><a itemprop="url" href="{{ "contact-us" | relURL }}" target="_self"
-                style="color: #000000;background-color: #ffffff;border-color: #e5e5e5"
-                class="mkdf-btn mkdf-btn-large mkdf-btn-predefined">
-                <span class="mkdf-btn-predefined-line-holder">
-                  <span class="mkdf-btn-line-hidden"></span>
-                  <span class="mkdf-btn-text">contact us</span>
-                  <span class="mkdf-btn-line"></span>
-                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play "></i>
-                </span>
-              </a>
-            </rs-layer><!--
-
-							--><rs-layer id="slider-13-slide-32-layer-22" data-type="shape" data-text="w:normal;" data-dim="w:100%;h:100%;"
-              data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_999="o:0;st:w;"
-              style="z-index:8;background-color:rgba(30,30,30,0.3);">
-            </rs-layer><!--
---> </rs-slide>
-        </rs-slides>
-        <rs-static-layers><!--
-					--></rs-static-layers>
-      </rs-module>
-      <script type="text/javascript">
-        setREVStartSize({ c: 'rev_slider_13_1', rl: [1240, 1024, 778, 480], el: [1080, 850, 800, 500], gw: [1300, 1100, 600, 300], gh: [1080, 850, 800, 500], type: 'standard', justify: '', layout: 'fullscreen', offsetContainer: 'html.touch .eltdf-mobile-header, html:not(.touch) .eltdf-page-header ', offset: '', mh: "0" });
-        var revapi13,
-          tpj;
-        function revinit_revslider131() {
-          jQuery(function () {
-            tpj = jQuery;
-            revapi13 = tpj("#rev_slider_13_1");
-            if (revapi13 == undefined || revapi13.revolution == undefined) {
-              revslider_showDoubleJqueryError("rev_slider_13_1");
-            } else {
-              revapi13.revolution({
-                sliderLayout: "fullscreen",
-                visibilityLevels: "1240,1024,778,480",
-                gridwidth: "1300,1100,600,300",
-                gridheight: "1080,850,800,500",
-                perspective: 600,
-                perspectiveType: "local",
-                editorheight: "1080,850,800,500",
-                responsiveLevels: "1240,1024,778,480",
-                fullScreenOffsetContainer: "html.touch .eltdf-mobile-header, html:not(.touch) .eltdf-page-header ",
-                progressBar: { disableProgressBar: true },
-                navigation: {
-                  onHoverStop: false,
-                  arrows: {
-                    enable: true,
-                    tmp: "<span class=\"mkdf-nav-label\"></span></a><span class=\"mkdf-nav-mark ion-ios-play\"></span>",
-                    style: "grandprix-arrows",
-                    hide_onmobile: true,
-                    hide_under: "600px",
-                    left: {
-                      v_align: "bottom",
-                      h_offset: 35,
-                      v_offset: 35
-                    },
-                    right: {
-                      v_align: "bottom",
-                      h_offset: 35,
-                      v_offset: 35
-                    }
-                  }
-                },
-                fallbacks: {
-                  allowHTML5AutoPlayOnAndroid: true
-                },
-              });
-            }
-
-          });
-        } // End of RevInitScript
-        var once_revslider131 = false;
-        if (document.readyState === "loading") { document.addEventListener('readystatechange', function () { if ((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider131) { once_revslider131 = true; revinit_revslider131(); } }); } else { once_revslider131 = true; revinit_revslider131(); }
-      </script>
-      <script>
-        var htmlDivCss = unescape("%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%20%7B%0A%09background%3A%20rgba%280%2C0%2C0%2C0%29%3B%0A%20%20%20%20width%3A%20171px%3B%0A%20%20%20%20height%3A%2060px%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20font-family%3A%20Rajdhani%2Csans-serif%3B%0A%20%20%20%20font-size%3A%2014px%3B%0A%20%20%20%20font-weight%3A%20700%3B%0A%20%20%20%20letter-spacing%3A%20.1em%3B%0A%20%20%20%20text-transform%3A%20uppercase%3B%0A%20%20%20%20line-height%3A%2060px%3B%0A%20%20%20%20color%3A%20%23ffffff%3B%0A%20%20%20%20transition%3A%20all%20.3s%20ease-in-out%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%3Ahover%20%7B%0A%09background%3A%20rgba%280%2C0%2C0%2C0%29%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%20%7B%0A%09transform%3A%20scaleX%28-1%29%3B%0A%20%20%20%20color%3A%20%23%23custom-left-arrow-text-color%23%23%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Abefore%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%3Abefore%20%7B%0A%20%20%20%20content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20width%3A%2079px%3B%0A%20%20%20%20height%3A%2060px%3B%0A%20%20%20%20color%3A%20inherit%3B%0A%20%20%20%20border%3A%201px%20solid%20rgba%28255%2C%20255%2C%20255%2C%200.2%29%3B%0A%20%20%20%20background-color%3A%20transparent%3B%0A%20%20%20%20transition%3A%20width%20.3s%20ease%3B%0A%20%20%20%20right%3A%200%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Abefore%7B%0A%20%20%20%20border%3A%201px%20solid%20rgba%28255%2C%20255%2C%20255%2C%200.2%29%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Ahover%3Abefore%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%3Ahover%3Abefore%20%7B%0A%20%20%20%20width%3A%20calc%28100%25%20%2B%2055px%29%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%20.mkdf-nav-label%3Abefore%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%20.mkdf-nav-label%3Abefore%20%7B%0A%20%20%20%20content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20width%3A%2074px%3B%0A%20%20%20%20height%3A%201px%3B%0A%20%20%20%20top%3A%20calc%2850%25%20-%201px%29%3B%0A%20%20%20%20background-color%3A%20currentColor%3B%0A%20%20%20%20right%3A%20calc%28100%25%20%2B%2020px%29%3B%0A%20%20%20%20transform%3A%20translateX%280%29%20scaleX%280%29%3B%0A%20%20%20%20transform-origin%3A%20right%3B%0A%20%20%20%20transition%3A%20all%20.3s%20ease-in-out%3B%0A%20%20%20%20opacity%3A%20.4%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Ahover%20.mkdf-nav-label%3Abefore%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%3Ahover%20.mkdf-nav-label%3Abefore%20%7B%0A%20%20%20%20transform%3A%20translateX%2874px%29%20scaleX%281%29%3B%0A%20%20%20%20opacity%3A%201%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%20.mkdf-nav-label%3Aafter%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%20.mkdf-nav-label%3Aafter%7B%0A%20%20display%3A%20inline-block%3B%0A%20%20position%3A%20absolute%3B%0A%20%20font-family%3A%20Rajdhani%2Csans-serif%3B%0A%20%20font-size%3A%2014px%3B%0A%20%20font-weight%3A%20700%3B%0A%20%20letter-spacing%3A%20.1em%3B%0A%20%20text-transform%3A%20uppercase%3B%0A%20%20line-height%3A%2060px%3B%0A%20%20transition%3A%20all%20.3s%20ease-in-out%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%20.mkdf-nav-label%3Aafter%20%7B%0A%20%20content%3A%20%27prev%27%3B%0A%20%20transform%3A%20scaleX%28-1%29%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Ahover%20.mkdf-nav-label%3Aafter%20%7B%0A%20%20content%3A%20%27prev%27%3B%0A%20%20transform%3A%20translateX%2874px%29%20scaleX%28-1%29%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%20.mkdf-nav-label%3Aafter%20%7B%0A%20%20content%3A%20%27next%27%3B%20%20%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%3Ahover%20.mkdf-nav-label%3Aafter%20%7B%0A%20%20transform%3A%20translateX%2874px%29%3B%20%20%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%3Abefore%20%7B%0A%20%20display%3A%20none%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%20.mkdf-nav-mark%20%7B%0A%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20font-size%3A%2013px%3B%0A%20%20%20%20margin%3A%200%200%200%20128px%3B%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%20.mkdf-nav-mark%3Aafter%20%7B%0A%20%20%20%20content%3A%20%27%27%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20display%3A%20block%3B%0A%20%20%20%20right%3A%208px%3B%0A%20%20%20%20width%3A%2074px%3B%0A%20%20%20%20height%3A%201px%3B%0A%20%20%20%20top%3A%20calc%2850%25%20-%201px%29%3B%0A%20%20%20%20background-color%3A%20currentColor%3B%0A%20%20%20%20opacity%3A%201%3B%0A%20%20%20%20transform%3A%20scaleX%281%29%3B%0A%20%20%09opacity%3A%201%3B%0A%20%20%20%20transition%3A%20all%20.3s%20ease-in-out%3B%0A%20%20%20%20transform-origin%3A%20right%3B%0A%20%20%20%20%0A%7D%0A%0A%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%3Ahover%20.mkdf-nav-mark%3Aafter%20%7B%0A%20%20transform%3A%20scaleX%280%29%3B%0A%20%20opacity%3A%20.4%3B%0A%7D%0A%0A%40media%20%28max-width%3A%20480px%29%7B%0A%20%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%20.mkdf-nav-label%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%20.mkdf-nav-label%20%7B%0A%20%20%20%20display%3A%20none%3B%0A%20%20%7D%0A%20%20%0A%20%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-leftarrow%3Ahover%3Abefore%2C%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows.tp-rightarrow%3Ahover%3Abefore%20%7B%0A%20%20%20%20width%3A%2079px%3B%0A%20%20%7D%0A%20%20%0A%20%23rev_slider_13_1_wrapper%20.grandprix-arrows.tparrows%20.mkdf-nav-mark%3Aafter%20%7B%0A%20%20%20%20width%3A%2050px%3B%0A%20%20%7D%0A%20%0A%7D%0A%0A");
-        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-        if (htmlDiv) {
-          htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-        } else {
-          var htmlDiv = document.createElement('div');
-          htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-          document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-        }
-      </script>
-      <script>
-        var htmlDivCss = unescape("%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-28%22%5D%20.grandprix-arrows.tparrows.tp-leftarrow%3Abefore%2C%20%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-28%22%5D%20.grandprix-arrows.tparrows.tp-rightarrow%3Abefore%7B%0Aborder%3A%201px%20solid%20rgba%28255%2C%20255%2C%20255%2C%200.2%29%20%21important%3B%0A%7D%0A%0A%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-31%22%5D%20.grandprix-arrows.tparrows.tp-leftarrow%3Abefore%2C%20%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-31%22%5D%20.grandprix-arrows.tparrows.tp-rightarrow%3Abefore%7B%0Aborder%3A%201px%20solid%20rgba%28255%2C%20255%2C%20255%2C%200.2%29%20%21important%3B%0A%7D%0A%0A%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-32%22%5D%20.grandprix-arrows.tparrows.tp-leftarrow%3Abefore%2C%20%23rev_slider_13_1%5Bdata-slideactive%3D%22rs-32%22%5D%20.grandprix-arrows.tparrows.tp-rightarrow%3Abefore%7B%0Aborder%3A%201px%20solid%20rgba%28255%2C%20255%2C%20255%2C%200.2%29%20%21important%3B%0A%7D%0A%0A");
-        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-        if (htmlDiv) {
-          htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-        } else {
-          var htmlDiv = document.createElement('div');
-          htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-          document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-        }
-      </script>
-    </rs-module-wrap>
-    <!-- END REVOLUTION SLIDER -->
+            </div>
+          </div>
+        </div>
+        {{ end }}
+        <!-- Add other slides similarly -->
+      </div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
   </div>
 </div>
 
@@ -1035,4 +773,141 @@
   </div>
 
 </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.main-slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 3500,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
+      }
+    }
+  });
+</script>
+<style>
+/* Replace the existing swiper-slide and swiper-slide-active styles with: */
+.swiper-slide {
+    position: relative;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-image: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.swiper-slide-active::before {
+    opacity: 0.8;
+}
+
+/* Update the background-image style */
+.swiper-slide {
+    background-image: none;  /* Remove direct background image */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+  .main-slider {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+  }
+
+  .slide-content {
+    color: #fff;
+    max-width: 600px;
+  }
+
+  .slide-tag {
+    font-family: Heebo;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .slide-title {
+    font-family: Rajdhani;
+    font-size: 91px;
+    line-height: 95px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .slide-desc {
+    font-family: Ubuntu;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .slide-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .slide-title {
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    .slide-desc {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+</style>
 {{ end }}

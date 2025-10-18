@@ -4,6 +4,9 @@ weight: 1
 description: "With a lovely appearance, solid construction, convenience and cost-effectiveness, the Round Trailers are unique and custom-built to meet the needs of the client."
 thumbnail_image: "wp-content/uploads/2021/05/round.jpg"
 banner_image: "wp-content/uploads/2021/05/roundtrailer.jpg"
+slide_title: "Utility, convenience and bang for your buck!"
+slide_description: "The perfect trailer to start your dream project. Robust construction and fully customisable amenities."
+slide_image: "wp-content/uploads/2021/05/slider1.jpg"
 sizes:
 - 2.5M Long x 2M Wide x 2.1M Height - $ 19000
 - 2.7M Long x 2M Wide x 2.1M Height - $ 20500
