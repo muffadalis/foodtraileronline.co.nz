@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-
 <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-window-top mkdf-preload-background mkdf-has-bg-image mkdf-bg-parallax"
      style="
        height: 650px;
@@ -22,97 +21,83 @@
     </div>
 </div>
 
+<div class="mkdf-container">
+    <div class="mkdf-container-inner">
+        <!-- Title Section -->
+        <div class="mkdf-section-title-holder">
+            <span class="mkdf-st-tagline">Sold Trailers</span>
+            <h2 class="mkdf-st-title">Our Customers</h2>
+        </div>
 
-<div class="mkdf-container mkdf-default-page-template">
-
-    <div class="mkdf-container-inner clearfix">
-        <div class="mkdf-grid-row ">
-            <div class="mkdf-page-content-holder mkdf-grid-col-12">
-                <div class="mkdf-row-grid-section-wrapper ">
-                    <div class="mkdf-row-grid-section">
-                        <div class="vc_row wpb_row vc_row-fluid vc_custom_1620720544810">
-                            <div class="mkdf-vertical-lines"><span class="mkdf-vertical-line"></span><span
-                                    class="mkdf-vertical-line"></span><span class="mkdf-vertical-line"></span></div>
-                            <div class="wpb_column vc_column_container vc_col-sm-12">
-                                <div class="vc_column-inner">
-                                    <div class="wpb_wrapper">
-                                        <div class="mkdf-row-grid-section-wrapper ">
-                                            <div class="mkdf-row-grid-section">
-                                                <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                                        <div class="vc_column-inner">
-                                                            <div class="wpb_wrapper">
-                                                                <div
-                                                                    class="mkdf-section-title-holder  mkdf-st-split  mkdf-has-appear-animation">
-                                                                    <div class="mkdf-st-inner">
-                                                                        <span class="mkdf-st-tagline">
-                                                                            Sold Trailers </span>
-                                                                        <h2 class="mkdf-st-title">
-                                                                            <span class="mkdf-sts-title-text">Our
-                                                                                Customers<br /></span>
-                                                                            <span class="mkdf-sts-separator"></span>
-                                                                        </h2>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="vc_empty_space" style="height: 69px"><span
-                                                                        class="vc_empty_space_inner"></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="mkdf-row-grid-section-wrapper ">
-                                            <div class="mkdf-row-grid-section">
-                                                <div class="vc_row wpb_row vc_row-fluid">
-                                                    <div class="wpb_column vc_column_container vc_col-sm-12">
-                                                        <div class="vc_column-inner">
-                                                            <div class="wpb_wrapper">
-                                                                <div class="mkdf-image-gallery mkdf-grid-list mkdf-disable-bottom-space  mkdf-ig-grid-type mkdf-three-columns mkdf-normal-space  mkdf-image-behavior-lightbox ">
-                                                                    <div class="mkdf-ig-inner mkdf-outer-space">
-                                                                    {{ with .Params.customers }}
-                                                                    {{ range . }}
-                                                                    <div class="mkdf-ig-image mkdf-item-space mkdf-team-holder mkdf-team-info-below-image">
-                                                                        <div class="mkdf-ig-image-inner mkdf-team-inner">
-                                                                            <a itemprop="image" class="mkdf-ig-lightbox" data-rel="prettyPhoto[image_gallery_appliances]"
-                                                                                href="{{ .photo | relURL }}">
-                                                                                <img fetchpriority="high"
-                                                                                    loading="lazy" decoding="async" width="800"
-                                                                                    height="600"
-                                                                                    src="{{ .photo | relURL }}"
-                                                                                    class="attachment-full size-full"
-                                                                                    alt=""
-                                                                                    sizes="(max-width: 800px) 100vw, 800px" />
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="mkdf-team-info">
-                                                                            <h6 class="mkdf-team-position">{{ .location }}</h6>
-                                                                            <h4 class="mkdf-team-name">{{ .name }}</h4>
-                                                                        </div>
-                                                                    </div>
-                                                                    {{ end }}
-                                                                    {{ end }}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Customers Grid -->
+        <div class="customers-grid">
+            {{ with .Params.customers }}
+            {{ range . }}
+            <div class="customer-card">
+                <div class="customer-image">
+                    <img src="{{ .photo | relURL }}"
+                         width="800"
+                         height="600"
+                         loading="lazy"
+                         alt="{{ .name }}'s Food Trailer" />
+                </div>
+                <div class="customer-info">
+                    <h6 class="customer-location">{{ .location }}</h6>
+                    <h4 class="customer-name">{{ .name }}</h4>
                 </div>
             </div>
+            {{ end }}
+            {{ end }}
         </div>
     </div>
-
 </div>
 
+<style>
+.customers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.customer-card {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.customer-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.customer-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.customer-location {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.customer-name {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .customers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .customers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
 {{ end }}
