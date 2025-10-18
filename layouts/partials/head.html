@@ -64,8 +64,7 @@
 			height: 230px !important;
 		}
 	}
-</style>
-<style type="text/css" id="wp-custom-css">
+
 	.mkdf-page-header .mkdf-menu-area .mkdf-logo-wrapper a {
 		max-height: 140px;
 		height: 80px !important;
@@ -89,30 +88,6 @@
 		font-size: 20px;
 		line-height: 1.277777777777778em;
 	}
-
-	.entry-date {
-		display: none !important;
-	}
-
-	.mkdf-blog-share {
-		display: none !important;
-	}
-
-	.mkdf-tabs .mkdf-tabs-nav li {
-		float: none;
-		margin: 0 auto;
-		padding: 0;
-		display: inline;
-	}
-
-	.mkdf-tabs .mkdf-tabs-nav {
-		text-align: center;
-	}
-
-	.mkdf-tabs.mkdf-tabs-standard .mkdf-tab-container {
-		line-height: 40px;
-	}
-
 
 	.mkdf-side-menu-button-opener.mkdf-side-menu-button-opener-predefined {
 		background-color: #6f2e2e;
@@ -219,19 +194,6 @@
 		font-size: 15px;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 	.mkdf-page-header {
 		background: rgba(256, 256, 256, 0.3);
 	}
@@ -272,14 +234,11 @@
 		background: rgba(256, 256, 256, 0.0) !important;
 	}
 
-
-
-
 	.trailer-custm-padng {
 		padding-left: 100px;
 		padding-right: 100px;
-		padding-top: 150px;
-		padding-bottom: 150px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		background-color: #f5f5f5;
 	}
 
@@ -300,8 +259,6 @@
 			padding-right: 13px !important;
 		}
 	}
-
-
 
 	@media screen and (min-width: 1025px) and (max-width: 1170px) {
 		.mkdf-main-menu>ul>li>a {
@@ -344,12 +301,6 @@
 	}
 
 
-	.rs-layer .mkdf-btn.mkdf-btn-predefined .mkdf-btn-predefined-line-holder .mkdf-btn-text {
-		padding: 12px 18px 12px 21px !important;
-	}
-
-
-
 	@media screen and (max-width: 1280px) {
 		.mkdf-side-menu-slide-from-opener .mkdf-side-menu .mkdf-side-menu-holder {
 			padding: 20px 40px !important;
@@ -367,62 +318,54 @@
 		color: #000;
 		font-size: 20px;
 	}
-</style>
-<style type="text/css" data-type="vc_custom-css">
+
 	.mkdf-cc-bs-nav .vc_column_container {
 		z-index: 50;
 	}
 
-	.mkdf-main-menu > ul > li.has_sub > a > .item_outer:after {
-    content: '';
-    display: none;
-}
-
-.mkdf-main-menu > ul > li.has_sub:hover > .second {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mkdf-main-menu .second {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
-    z-index: 10;
-    transform: translateY(30px);
-    transition: all .3s ease;
-}
-
-.mkdf-main-menu .second .inner {
-    position: relative;
-    display: block;
-    background-color: #fff;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-</style>
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-	.vc_custom_1622018181007 {
-		padding-top: 25px !important;
-		padding-right: 0px !important;
-		padding-bottom: 20px !important;
-		padding-left: 0px !important;
+	.mkdf-main-menu>ul>li.has_sub>a>.item_outer:after {
+		content: '';
+		display: none;
 	}
+
+	.mkdf-main-menu>ul>li.has_sub:hover>.second {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.mkdf-main-menu .second {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		visibility: hidden;
+		opacity: 0;
+		overflow: hidden;
+		z-index: 10;
+		transform: translateY(30px);
+		transition: all .3s ease;
+	}
+
+	.mkdf-main-menu .second .inner {
+		position: relative;
+		display: block;
+		background-color: #fff;
+		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+
 	.vc_custom_1569322970774 {
 		padding-top: 124px !important;
 		padding-bottom: 0px !important;
@@ -611,71 +554,56 @@
 		padding-top: 0px !important;
 		padding-bottom: 0px !important;
 	}
+
+	.wp-block-button__link {
+		color: #fff;
+		background-color: #32373c;
+		border-radius: 9999px;
+		box-shadow: none;
+		text-decoration: none;
+		padding: calc(.667em + 2px) calc(1.333em + 2px);
+		font-size: 1.125em
+	}
+
+	.wp-block-file__button {
+		background: #32373c;
+		color: #fff;
+		text-decoration: none
+	}
+
+	.vc_custom_1568904237557 {
+		padding-top: 0px !important;
+		padding-bottom: 130px !important;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+	}
+
+	.vc_custom_1620730875110 {
+		padding-top: 20px !important;
+		padding-bottom: 125px !important;
+		background-position: 0 0 !important;
+		background-repeat: no-repeat !important;
+	}
+
+	.vc_custom_1620199042435 {
+		padding-top: 75px !important;
+	}
+
+	.vc_custom_1569413378447 {
+		padding-top: 7px !important;
+	}
+
+	.vc_custom_1567499344778 {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+
+	.vc_custom_1620720544810 {
+		padding-top: 20px !important;
+		padding-bottom: 82px !important;
+	}
 </style>
-
-
-
-
-<style id='classic-theme-styles-inline-css' type='text/css'>
-		/*! This file is auto-generated */
-		.wp-block-button__link {
-			color: #fff;
-			background-color: #32373c;
-			border-radius: 9999px;
-			box-shadow: none;
-			text-decoration: none;
-			padding: calc(.667em + 2px) calc(1.333em + 2px);
-			font-size: 1.125em
-		}
-
-		.wp-block-file__button {
-			background: #32373c;
-			color: #fff;
-			text-decoration: none
-		}
-	</style>
-	
-
-
-
-
-
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-		.vc_custom_1568904237557 {
-			padding-top: 0px !important;
-			padding-bottom: 130px !important;
-			background-position: center !important;
-			background-repeat: no-repeat !important;
-			background-size: cover !important;
-		}
-
-		.vc_custom_1620730875110 {
-			padding-top: 20px !important;
-			padding-bottom: 125px !important;
-			background-position: 0 0 !important;
-			background-repeat: no-repeat !important;
-		}
-
-		.vc_custom_1620199042435 {
-			padding-top: 75px !important;
-		}
-
-		.vc_custom_1569413378447 {
-			padding-top: 7px !important;
-		}
-
-		.vc_custom_1567499344778 {
-			padding-top: 0px !important;
-			padding-bottom: 0px !important;
-		}
-	</style>
-	
-	<style type="text/css" data-type="vc_shortcodes-custom-css">
-		.vc_custom_1620720544810 {
-			padding-top: 20px !important;
-			padding-bottom: 82px !important;
-		}
-	</style>
 
 <noscript>
 	<style>
