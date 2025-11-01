@@ -612,3 +612,8 @@
 		}
 	</style>
 </noscript>
+
+{{ $first := first 1 (where .Site.RegularPages "Section" "our-trailers") }}
+{{ range $first }}
+<link rel="preload" as="image" href="{{ .Params.slide_image | relURL }}" crossorigin>
+{{ end }}
