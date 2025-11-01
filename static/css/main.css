@@ -1,0 +1,5 @@
+    @media (max-width: 576px) {
+        .mkdf-container-inner, .mkdf-content-inner {
+            width: 350px !important;
+        }
+    }
