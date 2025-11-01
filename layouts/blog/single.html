@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="mkdf-content" style="margin-top: 100px;">
+  <div class="mkdf-content-inner">
+    <div class="mkdf-container mkdf-page-content-holder mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
+      <div class="mkdf-container-inner clearfix">
+        <div class="mkdf-grid-row mkdf-grid-huge-gutter">
+          <div class="mkdf-page-content-holder mkdf-grid-col-12">
+
+            <article id="post-{{ .File.UniqueID }}"
+              class="mkdf-post-has-media post type-post status-publish format-standard has-post-thumbnail hentry">
+              <div class="mkdf-post-content">
+                <div class="mkdf-post-heading">
+
+                  <div class="mkdf-post-image">
+                    <img width="1300" height="790" src="{{ .Params.featured_image }}"
+                      class="attachment-full size-full wp-post-image" alt="a" sizes="(max-width: 1300px) 100vw, 1300px">
+                  </div>
+                </div>
+                <div class="mkdf-post-text">
+                  <div class="mkdf-post-text-inner">
+
+                    <!-- Post Meta -->
+                    <div class="mkdf-post-info-top">
+                      <div class="mkdf-post-info-date entry-date published updated" style="color: #ed1d24;">
+                        {{ .Date.Format "January 2, 2006" }}
+                      </div>
+
+                      <div class="mkdf-post-info-category">
+                        {{ range .Params.categories }}
+                        [<a href="/categories/{{ . | urlize }}/">{{ . }}</a>]
+                        {{ end }}
+                      </div>
+                    </div>
+
+                    <!-- Post Body -->
+                    <div class="mkdf-post-text-main">
+                      {{ .Content }}
+                    </div>
+                    <div class="mkdf-post-info-bottom clearfix">
+                      <div class="mkdf-post-info-bottom-left">
+                        {{- if $.Params.tags }}
+                        <div class="mkdf-tags-holder">
+                          <div class="mkdf-tags">
+                            {{- range $index, $tag := $.Params.tags }}
+                            <a href="{{ "tags/" | relURL }}{{ $tag | urlize }}/" rel="tag">{{ $tag }}</a>
+                            {{- if lt (add $index 1) (len $.Params.tags) }}
+                            <span class="eltdf-tag-separator"></span>
+                            {{- end }}
+                            {{- end }}
+                          </div>
+                        </div>
+                        {{- end }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="{{ "css/blog.css" | absURL }}" />
+
+{{ end }}

@@ -1,0 +1,104 @@
+{{ define "main" }}
+<div class="mkdf-content" style="margin-top: -140px">
+  <div class="mkdf-content-inner">
+
+    <!-- Page Title / Hero -->
+    <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-window-top mkdf-preload-background mkdf-has-bg-image"
+         style="height: 500px; background-color: #f5f5f5; background-image:url({{"wp-content/uploads/2019/09/blog-title.jpg" | absURL}});"
+         data-height="500">
+      <div class="mkdf-title-image">
+        <img src="{{ "wp-content/uploads/2019/09/blog-title.jpg" | absURL}}" alt="Blog Hero Image" />
+      </div>
+      <div class="mkdf-title-wrapper">
+        <div class="mkdf-title-inner">
+          <div class="mkdf-grid">
+            <h1 class="mkdf-page-title entry-title">{{ .Title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mkdf-container">
+      <div class="mkdf-container-inner clearfix">
+        <div class="mkdf-grid-row mkdf-grid-huge-gutter">
+          <div class="mkdf-page-content-holder mkdf-grid-col-12">
+            <div class="mkdf-blog-holder mkdf-blog-standard mkdf-blog-pagination-standard">
+              <div class="mkdf-blog-holder-inner">
+                {{ range .Paginator.Pages }}
+                <article id="post-{{ .File.UniqueID }}" class="mkdf-post-has-media post type-post status-publish format-standard has-post-thumbnail hentry">
+                  <div class="mkdf-post-content">
+                    <div class="mkdf-post-heading">
+                      <div class="mkdf-post-image">
+                        <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                          {{ with .Params.featured_image }}
+                          <img src="{{ . }}" class="attachment-full size-full wp-post-image" alt="{{ $.Title }}" loading="lazy"/>
+                          {{ end }}
+                        </a>
+                      </div>
+                    </div>
+                    <div class="mkdf-post-text">
+                      <div class="mkdf-post-text-inner">
+                        <div class="mkdf-post-info-top">
+                          <div class="mkdf-post-info-date entry-date published updated">
+                            <a href="{{ .Date.Format "2006/01" }}">{{ .Date.Format "January 2, 2006" }}</a>
+                          </div>
+                          <div class="mkdf-post-info-category">
+                            {{ range .Params.categories }}
+                            <a href="/categories/{{ . | urlize }}/" rel="category tag">{{ . }}</a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        <div class="mkdf-post-text-main">
+                          <h2 itemprop="name" class="entry-title mkdf-post-title">
+                            <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                          </h2>
+                          <div class="mkdf-post-excerpt-holder">
+                            <p itemprop="description" class="mkdf-post-excerpt">{{ .Description }}</p>
+                          </div>
+                        </div>
+                        <div class="mkdf-post-info-bottom clearfix">
+                          <div class="mkdf-post-info-bottom-left">
+                            <div class="mkdf-post-read-more-button">
+                              <a href="{{ .RelPermalink }}" class="mkdf-btn mkdf-btn-medium mkdf-btn-simple-predefined mkdf-blog-list-button">
+                                <span class="mkdf-btn-predefined-line-holder">
+                                  <span class="mkdf-btn-line-hidden"></span>
+                                  <span class="mkdf-btn-text">Read More</span>
+                                  <span class="mkdf-btn-line"></span>
+                                  <i class="mkdf-btn-predefined-icon mkdf-icon-ion-icon ion-ios-play"></i>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                {{ end }}
+
+              </div>
+
+              <!-- Pagination -->
+              <div class="mkdf-blog-pagination">
+                <ul>
+                  {{ if .Paginator.HasPrev }}
+                  <li class="mkdf-pag-prev">
+                    <a href="{{ .Paginator.Prev.URL }}"><span class="mkdf-nav-label">Prev</span><span class="mkdf-nav-mark ion-ios-play"></span></a>
+                  </li>
+                  {{ end }}
+                  {{ if .Paginator.HasNext }}
+                  <li class="mkdf-pag-next">
+                    <a href="{{ .Paginator.Next.URL }}"><span class="mkdf-nav-label">Next</span><span class="mkdf-nav-mark ion-ios-play"></span></a>
+                  </li>
+                  {{ end }}
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .mkdf-content-inner -->
+</div> <!-- .mkdf-content -->
+{{ end }}
