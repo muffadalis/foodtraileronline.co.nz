@@ -191,6 +191,13 @@
     background-color: #000
 }
 
+.mkdf-post-text-main a {
+    color: #ed1d24
+}
+.mkdf-post-text-main a:hover {
+    color: #ed1d24;
+    text-decoration: underline;
+}
 .mkdf-blog-holder article .mkdf-post-info-top .mkdf-post-info-date a {
     color: #ed1d24
 }
